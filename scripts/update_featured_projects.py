@@ -4,7 +4,7 @@ import os
 import re
 import urllib.request
 import json
-from datetime import date
+from datetime import date, datetime, timezone, timedelta
 
 USERNAME = "indraoverflow"
 README = "README.md"
@@ -41,7 +41,9 @@ recent_data = fetch(
     f"?q=author:{USERNAME}+type:pr&sort=updated&order=desc&per_page=8"
 )
 recent_items = recent_data.get("items", [])
-recent_lines = ["## 🔄 Recent Contributions", "", "_Last updated: auto-generated_", ""]
+wib_now = datetime.now(timezone(timedelta(hours=7)))
+updated_label = wib_now.strftime("%d %B %Y, %H:%M WIB")
+recent_lines = ["## 🔄 Recent Contributions", "", f"_Last updated: {updated_label}_", ""]
 if not recent_items:
     recent_lines.append("_No recent pull requests found._")
 else:
@@ -53,7 +55,7 @@ else:
         html_url = it.get("html_url", "")
         state = it.get("state", "")
         merged = " (merged)" if it.get("pull_request", {}).get("merged_at") else ""
-        recent_lines.append(f"- [{title}]({html_url}) — `{repo}` ({state}{merged})")
+        recent_lines.append(f"- [{title}]({html_url}) : `{repo}` ({state}{merged})")
 recent_body = "\n".join(recent_lines)
 
 # Featured projects (merged PRs, deduped by repo)
