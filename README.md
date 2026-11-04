@@ -30,6 +30,23 @@ and contributing to the open-source community.
 
 ---
 
+<!-- RECENT_CONTRIBUTIONS:START -->
+## 🔄 Recent Contributions
+
+_Last updated: auto-generated_ 
+
+- [docs: update professional positioning and intro](https://github.com/indraoverflow/indraoverflow/pull/1) — `indraoverflow/indraoverflow` (open)
+- [fix(run-dispatch): bound and de-correlate provider_quota_recovery retry release](https://github.com/paperclipai/paperclip/pull/14391) — `paperclipai/paperclip` (open)
+- [feat: add Google Antigravity (Cloud Code Assist) provider with OAuth login](https://github.com/tashfeenahmed/freellmapi/pull/1815) — `tashfeenahmed/freellmapi` (open)
+- [fix(openai-compat): send stream:false for non-streaming chat completions](https://github.com/tashfeenahmed/freellmapi/pull/1811) — `tashfeenahmed/freellmapi` (open)
+- [feat: MFA, security hardening, storage, document multi-upload, and code scanning fixes](https://github.com/artivisi/balaka/pull/40) — `artivisi/balaka` (open)
+- [fix: nav link 'Log Audit' points to /settings/audit-logs instead of /audit-log](https://github.com/artivisi/balaka/pull/39) — `artivisi/balaka` (open)
+- [Sync: code scanning fixes and feature updates](https://github.com/indraoverflow/balaka/pull/8) — `indraoverflow/balaka` (closed (merged))
+- [Sync: code scanning fixes and feature updates](https://github.com/artivisi/balaka/pull/42) — `artivisi/balaka` (open)
+<!-- RECENT_CONTRIBUTIONS:END -->
+
+---
+
 ## 🛠 Tech Stack
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
