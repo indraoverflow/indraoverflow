@@ -58,10 +58,12 @@ _Last updated: 05 November 2026, 02:49 GMT+7_
 
 _Categorized by contributions._
 
-**AI & Agents:** ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-**Backend & Enterprise:** ![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)
-**Developer Tools:** ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-**Security:** ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+| Kategori | Teknologi |
+|---|---|
+| AI & Agents | TypeScript |
+| Backend & Enterprise | Java |
+| Developer Tools | TypeScript |
+| Security | Python |
 <!-- TECH_STACK:END -->
 
 ---
