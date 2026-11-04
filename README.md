@@ -2,7 +2,7 @@
 
 ### Senior Software Engineer | Backend Engineering | DevOps
 
-Software Engineer with 12+ years of experience building
+Software Engineer with 14+ years of experience building
 backend systems, enterprise applications, and scalable
 technology solutions.
 
@@ -40,7 +40,6 @@ _Last updated: auto-generated_
 - [fix(openai-compat): send stream:false for non-streaming chat completions](https://github.com/tashfeenahmed/freellmapi/pull/1811) — `tashfeenahmed/freellmapi` (open)
 - [feat: MFA, security hardening, storage, document multi-upload, and code scanning fixes](https://github.com/artivisi/balaka/pull/40) — `artivisi/balaka` (open)
 - [fix: nav link 'Log Audit' points to /settings/audit-logs instead of /audit-log](https://github.com/artivisi/balaka/pull/39) — `artivisi/balaka` (open)
-- [Sync: code scanning fixes and feature updates](https://github.com/artivisi/balaka/pull/42) — `artivisi/balaka` (open)
 <!-- RECENT_CONTRIBUTIONS:END -->
 
 ---
