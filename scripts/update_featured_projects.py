@@ -129,13 +129,13 @@ for repo in contrib_repos:
     category_langs.setdefault(cat, set())
     category_langs[cat].add(lang)
 
-tech_lines = ["## 🛠 Tech Stack", "", "_Categorized by contributions._", "", "| Kategori | Teknologi |", "|---|---|"]
+tech_lines = ["## 🛠 Tech Stack", "", "_Categorized by contributions._", "", "| Category | Technologies |", "|---|---|"]
 if not category_langs:
     tech_lines.append("_No contribution data available._")
 else:
     for cat in sorted(category_langs):
         langs = sorted(category_langs[cat])
-        tech_lines.append(f"| {cat} | {', '.join(langs)} |")
+        tech_lines.append(f"| **{cat}** | {', '.join(langs)} |")
 tech_body = "\n".join(tech_lines).rstrip()
 
 with open(README, "r", encoding="utf-8") as f:
