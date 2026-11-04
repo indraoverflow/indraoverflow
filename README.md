@@ -33,7 +33,7 @@ and contributing to the open-source community.
 <!-- RECENT_CONTRIBUTIONS:START -->
 ## 🔄 Recent Contributions
 
-_Last updated: 05 November 2026, 02:59 GMT+7_
+_Last updated: 05 November 2026, 03:04 GMT+7_
 
 - [fix: Update filesystem boundary in codex/SKILL.md](https://github.com/garrytan/gstack/pull/3995) : `garrytan/gstack` (closed)
 - [fix(question-log): stamp ts server-side to prevent backdating](https://github.com/garrytan/gstack/pull/3993) : `garrytan/gstack` (closed)
@@ -56,14 +56,16 @@ _Last updated: 05 November 2026, 02:59 GMT+7_
 <!-- TECH_STACK:START -->
 ## 🛠 Tech Stack
 
-_Categorized by contributions._
-
 | Category | Technologies |
 |---|---|
-| **AI & Agents** | TypeScript |
-| **Backend & Enterprise** | Java |
-| **Developer Tools** | TypeScript |
-| **Security** | Python |
+| **Programming Languages** | Go, TypeScript, JavaScript, Python, Java |
+| **Backend Engineering** | Node.js, Spring Boot, REST API, gRPC |
+| **Databases & Caching** | PostgreSQL, MongoDB, Redis |
+| **DevOps & CI/CD** | Docker, Kubernetes, GitHub Actions |
+| **Cloud & Infrastructure** | Linux, Nginx, Networking |
+| **Monitoring & Observability** | Prometheus, Grafana, Logging |
+| **Version Control** | Git, GitHub |
+| **Software Architecture** | Microservices, Distributed Systems, System Design |
 <!-- TECH_STACK:END -->
 
 ---

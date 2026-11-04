@@ -82,61 +82,22 @@ else:
         featured_lines.append(f"- **[{repo}]({html_url})** — {pr_title} ([PR]({pr_url}))")
 featured_body = "\n".join(featured_lines)
 
-# Tech stack (aggregated from contributed repositories, grouped by category)
-contrib_repos = []
-for it in recent_items + merged_items:
-    repo = it.get("repository_url", "").split("/repos/")[-1]
-    if not repo or repo.startswith(f"{USERNAME}/"):
-        continue
-    if repo in contrib_repos:
-        continue
-    contrib_repos.append(repo)
-
-def categorize(topics, repo):
-    t = set(topics or [])
-    name = repo.lower()
-    if t & {"security", "appsec", "bug-bounty", "penetration-testing", "ethical-hacking", "vulnerability-scanner"} or "security" in name:
-        return "Security"
-    if t & {"ai", "ai-agents", "llm", "mcp", "agent-orchestration", "agentic-ai", "claude", "codex", "hermes"} or "llm" in name or "paperclip" in name or "freellmapi" in name:
-        return "AI & Agents"
-    if t & {"spring-boot", "erp", "accounting", "postgresql", "backend", "java", "inventory", "payroll"} or "balaka" in name:
-        return "Backend & Enterprise"
-    if "gstack" in name:
-        return "Developer Tools"
-    if t & {"devops", "docker", "shell", "infrastructure", "cli", "automation"}:
-        return "DevOps & Infrastructure"
-    return "Other"
-
-color_map = {
-    "TypeScript": "3178C6", "JavaScript": "F7DF1E", "Python": "3776AB",
-    "Go": "00ADD8", "Java": "007396", "C": "A8B9CC", "C++": "00599C",
-    "Shell": "4EAA25", "HTML": "E34F26", "CSS": "1572B6", "Rust": "000000",
-    "Ruby": "CC342D", "PHP": "777BB4", "Kotlin": "7F52FF", "Swift": "F05138",
-    "Dockerfile": "2496ED",
-}
-
-category_langs = {}
-for repo in contrib_repos:
-    try:
-        r = fetch(f"https://api.github.com/repos/{repo}")
-        topics = r.get("topics", [])
-        cat = categorize(topics, repo)
-        lang = r.get("language")
-    except Exception:
-        continue
-    if not lang:
-        continue
-    category_langs.setdefault(cat, set())
-    category_langs[cat].add(lang)
-
-tech_lines = ["## 🛠 Tech Stack", "", "_Categorized by contributions._", "", "| Category | Technologies |", "|---|---|"]
-if not category_langs:
-    tech_lines.append("_No contribution data available._")
-else:
-    for cat in sorted(category_langs):
-        langs = sorted(category_langs[cat])
-        tech_lines.append(f"| **{cat}** | {', '.join(langs)} |")
-tech_body = "\n".join(tech_lines).rstrip()
+# Tech stack (recommended curated format)
+tech_lines = [
+    "## 🛠 Tech Stack",
+    "",
+    "| Category | Technologies |",
+    "|---|---|",
+    "| **Programming Languages** | Go, TypeScript, JavaScript, Python, Java |",
+    "| **Backend Engineering** | Node.js, Spring Boot, REST API, gRPC |",
+    "| **Databases & Caching** | PostgreSQL, MongoDB, Redis |",
+    "| **DevOps & CI/CD** | Docker, Kubernetes, GitHub Actions |",
+    "| **Cloud & Infrastructure** | Linux, Nginx, Networking |",
+    "| **Monitoring & Observability** | Prometheus, Grafana, Logging |",
+    "| **Version Control** | Git, GitHub |",
+    "| **Software Architecture** | Microservices, Distributed Systems, System Design |",
+]
+tech_body = "\n".join(tech_lines)
 
 with open(README, "r", encoding="utf-8") as f:
     content = f.read()
