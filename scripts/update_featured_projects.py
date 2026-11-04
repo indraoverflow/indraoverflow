@@ -42,7 +42,7 @@ recent_data = fetch(
 )
 recent_items = recent_data.get("items", [])
 wib_now = datetime.now(timezone(timedelta(hours=7)))
-updated_label = wib_now.strftime("%d %B %Y, %H:%M WIB")
+updated_label = wib_now.strftime("%d %B %Y, %H:%M GMT+7")
 recent_lines = ["## 🔄 Recent Contributions", "", f"_Last updated: {updated_label}_", ""]
 if not recent_items:
     recent_lines.append("_No recent pull requests found._")
