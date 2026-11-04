@@ -135,12 +135,11 @@ if not category_langs:
 else:
     for cat in sorted(category_langs):
         langs = sorted(category_langs[cat])
-        tech_lines.append(f"### {cat}")
-        tech_lines.append("")
+        badges = []
         for lang in langs:
             color = color_map.get(lang, "6c757d")
-            tech_lines.append(f"![{lang}](https://img.shields.io/badge/{lang.replace(' ', '%20')}-{color}?style=for-the-badge&logo={lang.lower()}&logoColor=white)")
-        tech_lines.append("")
+            badges.append(f"![{lang}](https://img.shields.io/badge/{lang.replace(' ', '%20')}-{color}?style=for-the-badge&logo={lang.lower()}&logoColor=white)")
+        tech_lines.append(f"**{cat}:** " + " ".join(badges))
 tech_body = "\n".join(tech_lines).rstrip()
 
 with open(README, "r", encoding="utf-8") as f:
