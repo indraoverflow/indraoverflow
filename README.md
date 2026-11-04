@@ -33,11 +33,7 @@ and contributing to the open-source community.
 <!-- RECENT_CONTRIBUTIONS:START -->
 ## 🔄 Recent Contributions
 
-<<<<<<< HEAD
-_Last updated: 05 November 2026, 02:50 GMT+7_
-=======
 _Last updated: 05 November 2026, 02:58 GMT+7_
->>>>>>> 1194a29 (style: use recommended table format for tech stack)
 
 - [fix: Update filesystem boundary in codex/SKILL.md](https://github.com/garrytan/gstack/pull/3995) : `garrytan/gstack` (closed)
 - [fix(question-log): stamp ts server-side to prevent backdating](https://github.com/garrytan/gstack/pull/3993) : `garrytan/gstack` (closed)
