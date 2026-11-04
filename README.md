@@ -76,8 +76,14 @@ _External repositories where my pull requests were merged._
 
 ## 📊 GitHub Stats
 
-![Profile Details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=indraoverflow&theme=default)
-![Top Languages](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=indraoverflow&theme=default)
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=indraoverflow&theme=default" alt="Profile Details" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=indraoverflow&theme=default" alt="Top Languages" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=indraoverflow&theme=default" alt="Commit Languages" />
+</p>
 
 ---
 
