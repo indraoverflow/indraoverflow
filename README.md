@@ -2,7 +2,7 @@
 
 **Software Engineer • Homelab Enthusiast • Open Source Contributor**
 
-I build practical, self-hosted systems and contribute to open-source projects around LLM routing, developer tooling, and automation.
+I build practical, self-hosted systems and contribute to open-source projects around LLM routing, developer tooling, and automation. Currently focused on agent orchestration and LLM gateways on a self-hosted homelab stack.
 
 ---
 
@@ -28,9 +28,9 @@ I build practical, self-hosted systems and contribute to open-source projects ar
 
 ## 📌 Featured Projects
 
-- **[FreeLLMAPI](https://github.com/tashfeenahmed/freellmapi)** — Contributed fixes for OpenAI-compatible custom endpoints and Antigravity provider support.
-- **[Paperclip](https://github.com/paperclipai/paperclip)** — Contributed a fix to bound and de-correlate provider quota recovery retries.
-- **Homelab Stack** — Self-hosted services, monitoring, and automation.
+- **[FreeLLMAPI](https://github.com/tashfeenahmed/freellmapi)** — Contributed fixes for OpenAI-compatible custom endpoints and Antigravity provider support. ([repo](https://github.com/tashfeenahmed/freellmapi))
+- **[Paperclip](https://github.com/paperclipai/paperclip)** — Contributed a fix to bound and de-correlate provider quota recovery retries. ([repo](https://github.com/paperclipai/paperclip))
+- **Homelab Stack** — Self-hosted services, monitoring, and automation (Docker, Paperclip, FreeLLMAPI, Hermes Agent).
 
 ---
 
