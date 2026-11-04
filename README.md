@@ -26,7 +26,8 @@ and contributing to the open-source community.
 - 🏗 Infrastructure automation, DevOps, and Linux/networking.
 - ☁️ Expanding into cloud-native, Kubernetes, and observability.
 - 🌐 GitHub: [@indraoverflow](https://github.com/indraoverflow)
-- 📫 Reach me via GitHub issues or discussions.
+- 💼 LinkedIn: [indraoverflow](https://www.linkedin.com/in/indraoverflow/)
+- 📫 Reach me via GitHub issues or LinkedIn.
 
 ---
 
@@ -84,5 +85,6 @@ _External repositories where my pull requests were merged._
 ## 🤝 Let's Connect
 
 - GitHub: [indraoverflow](https://github.com/indraoverflow)
+- LinkedIn: [indraoverflow](https://www.linkedin.com/in/indraoverflow/)
 
-> Always open to collaboration, feedback, and interesting problems.
+> Open to collaboration, professional networking, and interesting engineering challenges.
