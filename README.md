@@ -1,15 +1,30 @@
-# Hi, I'm Indra 👋
+# Hi, I'm Indra Prasetya 👋
 
-**Software Engineer • Homelab Enthusiast • Open Source Contributor**
+### Senior Software Engineer | Backend Engineering | DevOps
 
-I build practical, self-hosted systems and contribute to open-source projects around LLM routing, developer tooling, and automation.
+Software Engineer with 12+ years of experience building
+backend systems, enterprise applications, and scalable
+technology solutions.
+
+My engineering experience spans backend development,
+database engineering, telecommunications systems,
+infrastructure automation, and DevOps practices.
+
+Currently expanding my expertise in cloud-native
+infrastructure, Kubernetes, observability, and
+open-source engineering.
+
+I enjoy building practical engineering solutions,
+experimenting with self-hosted infrastructure,
+and contributing to the open-source community.
 
 ---
 
 ## 🚀 About Me
 
-- 🔧 I work on self-hosted platforms, LLM gateways, and agent orchestration.
-- 🏠 Homelab operator: Docker, Paperclip, FreeLLMAPI, Hermes Agent.
+- 🔧 Backend engineering, database engineering, and enterprise systems.
+- 🏗 Infrastructure automation, DevOps, and Linux/networking.
+- ☁️ Expanding into cloud-native, Kubernetes, and observability.
 - 🌐 GitHub: [@indraoverflow](https://github.com/indraoverflow)
 - 📫 Reach me via GitHub issues or discussions.
 
