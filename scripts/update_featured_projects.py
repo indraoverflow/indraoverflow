@@ -46,9 +46,11 @@ if not recent_items:
     recent_lines.append("_No recent pull requests found._")
 else:
     for it in recent_items:
+        repo = it.get("repository_url", "").split("/repos/")[-1]
+        if repo.startswith(f"{USERNAME}/"):
+            continue
         title = it.get("title", "").strip()
         html_url = it.get("html_url", "")
-        repo = it.get("repository_url", "").split("/repos/")[-1]
         state = it.get("state", "")
         merged = " (merged)" if it.get("pull_request", {}).get("merged_at") else ""
         recent_lines.append(f"- [{title}]({html_url}) — `{repo}` ({state}{merged})")
