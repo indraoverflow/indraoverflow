@@ -8,7 +8,7 @@ from datetime import date
 
 USERNAME = "indraoverflow"
 README = "README.md"
-START_YEAR = 2014  # adjust to actual career start year
+START_YEAR = 2012  # adjust to actual career start year
 RECENT_START = "<!-- RECENT_CONTRIBUTIONS:START -->"
 RECENT_END = "<!-- RECENT_CONTRIBUTIONS:END -->"
 FEATURED_START = "<!-- FEATURED_PROJECTS:START -->"
