@@ -81,8 +81,9 @@ _External repositories where my pull requests were merged._
 </p>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=indraoverflow&theme=default" alt="Top Languages" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=indraoverflow&theme=default" alt="Commit Languages" />
+  <img src="https://img.shields.io/badge/Backend_Engineering-00599C?style=for-the-badge" alt="Backend" />
+  <img src="https://img.shields.io/badge/DevOps-2496ED?style=for-the-badge" alt="DevOps" />
+  <img src="https://img.shields.io/badge/Open_Source_Contributor-181717?style=for-the-badge&logo=github" alt="Open Source" />
 </p>
 
 ---
