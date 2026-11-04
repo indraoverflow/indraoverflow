@@ -33,12 +33,22 @@ and contributing to the open-source community.
 <!-- RECENT_CONTRIBUTIONS:START -->
 ## 🔄 Recent Contributions
 
-_Last updated: 04 November 2026, 10:13 GMT+7_
+_Last updated: 05 November 2026, 02:42 GMT+7_
 
+- [fix: Update filesystem boundary in codex/SKILL.md](https://github.com/garrytan/gstack/pull/3995) : `garrytan/gstack` (closed)
+- [fix(question-log): stamp ts server-side to prevent backdating](https://github.com/garrytan/gstack/pull/3993) : `garrytan/gstack` (closed)
 - [fix(run-dispatch): bound and de-correlate provider_quota_recovery retry release](https://github.com/paperclipai/paperclip/pull/14391) : `paperclipai/paperclip` (open)
 - [feat: add Google Antigravity (Cloud Code Assist) provider with OAuth login](https://github.com/tashfeenahmed/freellmapi/pull/1815) : `tashfeenahmed/freellmapi` (open)
 - [fix(openai-compat): send stream:false for non-streaming chat completions](https://github.com/tashfeenahmed/freellmapi/pull/1811) : `tashfeenahmed/freellmapi` (open)
 - [feat: MFA, security hardening, storage, document multi-upload, and code scanning fixes](https://github.com/artivisi/balaka/pull/40) : `artivisi/balaka` (open)
+- [fix: nav link 'Log Audit' points to /settings/audit-logs instead of /audit-log](https://github.com/artivisi/balaka/pull/39) : `artivisi/balaka` (open)
+- [Sync: code scanning fixes and feature updates](https://github.com/artivisi/balaka/pull/42) : `artivisi/balaka` (open)
+- [Sync: code scanning fixes and feature updates](https://github.com/artivisi/balaka/pull/41) : `artivisi/balaka` (closed)
+- [fix(run-dispatch): bound and jitter provider_quota_recovery retry release](https://github.com/paperclipai/paperclip/pull/14389) : `paperclipai/paperclip` (closed)
+- [fix(install): resolve split repo layout, anchor to script dir, fail loud](https://github.com/awarexone/Agentic-Bug-Hunter/pull/161) : `awarexone/Agentic-Bug-Hunter` (closed (merged))
+- [fix(hackerone-mcp): update Team GraphQL query for removed H1 fields](https://github.com/awarexone/Agentic-Bug-Hunter/pull/164) : `awarexone/Agentic-Bug-Hunter` (closed (merged))
+- [fix(docs): correct install_tools.sh path, add doc-path regression test](https://github.com/awarexone/Agentic-Bug-Hunter/pull/163) : `awarexone/Agentic-Bug-Hunter` (closed (merged))
+- [fix(tools): point _dep_hint fallback at a path that exists](https://github.com/awarexone/Agentic-Bug-Hunter/pull/162) : `awarexone/Agentic-Bug-Hunter` (closed (merged))
 <!-- RECENT_CONTRIBUTIONS:END -->
 
 ---
@@ -46,16 +56,23 @@ _Last updated: 04 November 2026, 10:13 GMT+7_
 <!-- TECH_STACK:START -->
 ## 🛠 Tech Stack
 
-_Aggregated from public repositories._
+_Categorized by contributions._
 
-![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html&logoColor=white)
+### AI & Agents
+
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Shell](https://img.shields.io/badge/Shell-4EAA25?style=for-the-badge&logo=shell&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css&logoColor=white)
+
+### Backend & Enterprise
+
+![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)
+
+### Developer Tools
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+
+### Security
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![Dockerfile](https://img.shields.io/badge/Dockerfile-6c757d?style=for-the-badge&logo=dockerfile&logoColor=white)
 <!-- TECH_STACK:END -->
 
 ---

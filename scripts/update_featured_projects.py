@@ -38,7 +38,7 @@ def update_section(content, start, end, body):
 # Recent contributions (all PRs)
 recent_data = fetch(
     "https://api.github.com/search/issues"
-    f"?q=author:{USERNAME}+type:pr&sort=updated&order=desc&per_page=8"
+    f"?q=author:{USERNAME}+type:pr&sort=updated&order=desc&per_page=30"
 )
 recent_items = recent_data.get("items", [])
 wib_now = datetime.now(timezone(timedelta(hours=7)))
@@ -61,7 +61,7 @@ recent_body = "\n".join(recent_lines)
 # Featured projects (merged PRs, deduped by repo)
 merged_data = fetch(
     "https://api.github.com/search/issues"
-    f"?q=author:{USERNAME}+type:pr+is:merged&sort=updated&order=desc&per_page=20"
+    f"?q=author:{USERNAME}+type:pr+is:merged&sort=updated&order=desc&per_page=30"
 )
 merged_items = merged_data.get("items", [])
 seen = set()
@@ -82,35 +82,66 @@ else:
         featured_lines.append(f"- **[{repo}]({html_url})** — {pr_title} ([PR]({pr_url}))")
 featured_body = "\n".join(featured_lines)
 
-# Tech stack (aggregated from public repos)
-repos_data = fetch(f"https://api.github.com/users/{USERNAME}/repos?per_page=100&sort=updated")
-lang_totals = {}
-for repo in repos_data:
-    if repo.get("fork"):
+# Tech stack (aggregated from contributed repositories, grouped by category)
+contrib_repos = []
+for it in recent_items + merged_items:
+    repo = it.get("repository_url", "").split("/repos/")[-1]
+    if not repo or repo.startswith(f"{USERNAME}/"):
         continue
-    rname = repo.get("name")
-    try:
-        langs = fetch(f"https://api.github.com/repos/{USERNAME}/{rname}/languages")
-    except Exception:
+    if repo in contrib_repos:
         continue
-    for lang, count in langs.items():
-        lang_totals[lang] = lang_totals.get(lang, 0) + count
+    contrib_repos.append(repo)
 
-top_langs = sorted(lang_totals.items(), key=lambda x: x[1], reverse=True)[:8]
+def categorize(topics, repo):
+    t = set(topics or [])
+    name = repo.lower()
+    if t & {"security", "appsec", "bug-bounty", "penetration-testing", "ethical-hacking", "vulnerability-scanner"} or "security" in name:
+        return "Security"
+    if t & {"ai", "ai-agents", "llm", "mcp", "agent-orchestration", "agentic-ai", "claude", "codex", "hermes"} or "llm" in name or "paperclip" in name or "freellmapi" in name:
+        return "AI & Agents"
+    if t & {"spring-boot", "erp", "accounting", "postgresql", "backend", "java", "inventory", "payroll"} or "balaka" in name:
+        return "Backend & Enterprise"
+    if "gstack" in name:
+        return "Developer Tools"
+    if t & {"devops", "docker", "shell", "infrastructure", "cli", "automation"}:
+        return "DevOps & Infrastructure"
+    return "Other"
+
 color_map = {
     "TypeScript": "3178C6", "JavaScript": "F7DF1E", "Python": "3776AB",
     "Go": "00ADD8", "Java": "007396", "C": "A8B9CC", "C++": "00599C",
     "Shell": "4EAA25", "HTML": "E34F26", "CSS": "1572B6", "Rust": "000000",
     "Ruby": "CC342D", "PHP": "777BB4", "Kotlin": "7F52FF", "Swift": "F05138",
+    "Dockerfile": "2496ED",
 }
-tech_lines = ["## 🛠 Tech Stack", "", "_Aggregated from public repositories._", ""]
-if not top_langs:
-    tech_lines.append("_No language data available._")
+
+category_langs = {}
+for repo in contrib_repos:
+    try:
+        r = fetch(f"https://api.github.com/repos/{repo}")
+        topics = r.get("topics", [])
+        cat = categorize(topics, repo)
+        lang = r.get("language")
+    except Exception:
+        continue
+    if not lang:
+        continue
+    category_langs.setdefault(cat, set())
+    category_langs[cat].add(lang)
+
+tech_lines = ["## 🛠 Tech Stack", "", "_Categorized by contributions._", ""]
+if not category_langs:
+    tech_lines.append("_No contribution data available._")
 else:
-    for lang, _ in top_langs:
-        color = color_map.get(lang, "6c757d")
-        tech_lines.append(f"![{lang}](https://img.shields.io/badge/{lang.replace(' ', '%20')}-{color}?style=for-the-badge&logo={lang.lower()}&logoColor=white)")
-tech_body = "\n".join(tech_lines)
+    for cat in sorted(category_langs):
+        langs = sorted(category_langs[cat])
+        tech_lines.append(f"### {cat}")
+        tech_lines.append("")
+        for lang in langs:
+            color = color_map.get(lang, "6c757d")
+            tech_lines.append(f"![{lang}](https://img.shields.io/badge/{lang.replace(' ', '%20')}-{color}?style=for-the-badge&logo={lang.lower()}&logoColor=white)")
+        tech_lines.append("")
+tech_body = "\n".join(tech_lines).rstrip()
 
 with open(README, "r", encoding="utf-8") as f:
     content = f.read()
