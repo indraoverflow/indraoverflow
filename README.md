@@ -35,13 +35,11 @@ and contributing to the open-source community.
 
 _Last updated: auto-generated_
 
-- [docs: update professional positioning and intro](https://github.com/indraoverflow/indraoverflow/pull/1) — `indraoverflow/indraoverflow` (open)
 - [fix(run-dispatch): bound and de-correlate provider_quota_recovery retry release](https://github.com/paperclipai/paperclip/pull/14391) — `paperclipai/paperclip` (open)
 - [feat: add Google Antigravity (Cloud Code Assist) provider with OAuth login](https://github.com/tashfeenahmed/freellmapi/pull/1815) — `tashfeenahmed/freellmapi` (open)
 - [fix(openai-compat): send stream:false for non-streaming chat completions](https://github.com/tashfeenahmed/freellmapi/pull/1811) — `tashfeenahmed/freellmapi` (open)
 - [feat: MFA, security hardening, storage, document multi-upload, and code scanning fixes](https://github.com/artivisi/balaka/pull/40) — `artivisi/balaka` (open)
 - [fix: nav link 'Log Audit' points to /settings/audit-logs instead of /audit-log](https://github.com/artivisi/balaka/pull/39) — `artivisi/balaka` (open)
-- [Sync: code scanning fixes and feature updates](https://github.com/indraoverflow/balaka/pull/8) — `indraoverflow/balaka` (closed (merged))
 - [Sync: code scanning fixes and feature updates](https://github.com/artivisi/balaka/pull/42) — `artivisi/balaka` (open)
 <!-- RECENT_CONTRIBUTIONS:END -->
 
@@ -56,10 +54,10 @@ _Aggregated from public repositories._
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Shell](https://img.shields.io/badge/Shell-4EAA25?style=for-the-badge&logo=shell&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 ![Dockerfile](https://img.shields.io/badge/Dockerfile-6c757d?style=for-the-badge&logo=dockerfile&logoColor=white)
-![PLpgSQL](https://img.shields.io/badge/PLpgSQL-6c757d?style=for-the-badge&logo=plpgsql&logoColor=white)
 <!-- TECH_STACK:END -->
 
 ---
