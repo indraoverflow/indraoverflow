@@ -1,48 +1,95 @@
-# Hi, I'm Indra 👋
+# Hi, I'm Indra Prasetya 👋
 
-**Software Engineer • Homelab Enthusiast • Open Source Contributor**
+### Senior Software Engineer | Backend Engineering | DevOps
 
-I build practical, self-hosted systems and contribute to open-source projects around LLM routing, developer tooling, and automation.
+Software Engineer with 12+ years of experience building
+backend systems, enterprise applications, and scalable
+technology solutions.
+
+My engineering experience spans backend development,
+database engineering, telecommunications systems,
+infrastructure automation, and DevOps practices.
+
+Currently expanding my expertise in cloud-native
+infrastructure, Kubernetes, observability, and
+open-source engineering.
+
+I enjoy building practical engineering solutions,
+experimenting with self-hosted infrastructure,
+and contributing to the open-source community.
 
 ---
 
 ## 🚀 About Me
 
-- 🔧 I work on self-hosted platforms, LLM gateways, and agent orchestration.
-- 🏠 Homelab operator: Docker, Paperclip, FreeLLMAPI, Hermes Agent.
-- 🌐 GitHub: [@indraoverflow](https://github.com/indraoverflow)
-- 📫 Reach me via GitHub issues or discussions.
+- 🔧 Backend engineering, database engineering, and enterprise systems.
+- 🏗 Infrastructure automation, DevOps, and Linux/networking.
+- ☁️ Expanding into cloud-native, Kubernetes, and observability.
+- 💼 LinkedIn: [indraoverflow](https://www.linkedin.com/in/indraoverflow/)
+- 📫 Reach me via GitHub issues or LinkedIn.
 
 ---
 
+<!-- RECENT_CONTRIBUTIONS:START -->
+## 🔄 Recent Contributions
+
+_Last updated: auto-generated_
+
+- [docs: update professional positioning and intro](https://github.com/indraoverflow/indraoverflow/pull/1) — `indraoverflow/indraoverflow` (open)
+- [fix(run-dispatch): bound and de-correlate provider_quota_recovery retry release](https://github.com/paperclipai/paperclip/pull/14391) — `paperclipai/paperclip` (open)
+- [feat: add Google Antigravity (Cloud Code Assist) provider with OAuth login](https://github.com/tashfeenahmed/freellmapi/pull/1815) — `tashfeenahmed/freellmapi` (open)
+- [fix(openai-compat): send stream:false for non-streaming chat completions](https://github.com/tashfeenahmed/freellmapi/pull/1811) — `tashfeenahmed/freellmapi` (open)
+- [feat: MFA, security hardening, storage, document multi-upload, and code scanning fixes](https://github.com/artivisi/balaka/pull/40) — `artivisi/balaka` (open)
+- [fix: nav link 'Log Audit' points to /settings/audit-logs instead of /audit-log](https://github.com/artivisi/balaka/pull/39) — `artivisi/balaka` (open)
+- [Sync: code scanning fixes and feature updates](https://github.com/indraoverflow/balaka/pull/8) — `indraoverflow/balaka` (closed (merged))
+- [Sync: code scanning fixes and feature updates](https://github.com/artivisi/balaka/pull/42) — `artivisi/balaka` (open)
+<!-- RECENT_CONTRIBUTIONS:END -->
+
+---
+
+<!-- TECH_STACK:START -->
 ## 🛠 Tech Stack
 
+_Aggregated from public repositories._
+
+![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Shell](https://img.shields.io/badge/Shell-4EAA25?style=for-the-badge&logo=shell&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![Dockerfile](https://img.shields.io/badge/Dockerfile-6c757d?style=for-the-badge&logo=dockerfile&logoColor=white)
+![PLpgSQL](https://img.shields.io/badge/PLpgSQL-6c757d?style=for-the-badge&logo=plpgsql&logoColor=white)
+<!-- TECH_STACK:END -->
 
 ---
 
+<!-- FEATURED_PROJECTS:START -->
 ## 📌 Featured Projects
 
-- **[FreeLLMAPI](https://github.com/tashfeenahmed/freellmapi)** — Contributed fixes for OpenAI-compatible custom endpoints and Antigravity provider support.
-- **[Paperclip](https://github.com/paperclipai/paperclip)** — Contributed a fix to bound and de-correlate provider quota recovery retries.
-- **Homelab Stack** — Self-hosted services, monitoring, and automation.
+_External repositories where my pull requests were merged._
+
+- **[awarexone/Agentic-Bug-Hunter](https://github.com/awarexone/Agentic-Bug-Hunter)** — fix(install): resolve split repo layout, anchor to script dir, fail loud ([PR](https://github.com/awarexone/Agentic-Bug-Hunter/pull/161))
+<!-- FEATURED_PROJECTS:END -->
 
 ---
 
 ## 📊 GitHub Stats
 
-![Indra's GitHub stats](https://github-readme-stats.vercel.app/api?username=indraoverflow&show_icons=true&theme=default)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=indraoverflow&layout=compact)
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=indraoverflow&theme=default" alt="Profile Details" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Backend_Engineering-00599C?style=for-the-badge" alt="Backend" />
+  <img src="https://img.shields.io/badge/DevOps-2496ED?style=for-the-badge" alt="DevOps" />
+  <img src="https://img.shields.io/badge/Open_Source_Contributor-181717?style=for-the-badge&logo=github" alt="Open Source" />
+</p>
 
 ---
 
 ## 🤝 Let's Connect
 
-- GitHub: [indraoverflow](https://github.com/indraoverflow)
+- LinkedIn: [indraoverflow](https://www.linkedin.com/in/indraoverflow/)
 
-> Always open to collaboration, feedback, and interesting problems.
+> Open to collaboration, professional networking, and interesting engineering challenges.
