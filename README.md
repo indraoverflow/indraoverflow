@@ -51,8 +51,8 @@ and contributing to the open-source community.
 
 ## 📊 GitHub Stats
 
-![Indra's GitHub stats](https://github-readme-stats.vercel.app/api?username=indraoverflow&show_icons=true&theme=default)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=indraoverflow&layout=compact)
+![Profile Details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=indraoverflow&theme=default)
+![Top Languages](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=indraoverflow&theme=default)
 
 ---
 
