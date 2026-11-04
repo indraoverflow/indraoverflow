@@ -25,7 +25,6 @@ and contributing to the open-source community.
 - 🔧 Backend engineering, database engineering, and enterprise systems.
 - 🏗 Infrastructure automation, DevOps, and Linux/networking.
 - ☁️ Expanding into cloud-native, Kubernetes, and observability.
-- 🌐 GitHub: [@indraoverflow](https://github.com/indraoverflow)
 - 💼 LinkedIn: [indraoverflow](https://www.linkedin.com/in/indraoverflow/)
 - 📫 Reach me via GitHub issues or LinkedIn.
 
@@ -84,7 +83,6 @@ _External repositories where my pull requests were merged._
 
 ## 🤝 Let's Connect
 
-- GitHub: [indraoverflow](https://github.com/indraoverflow)
 - LinkedIn: [indraoverflow](https://www.linkedin.com/in/indraoverflow/)
 
 > Open to collaboration, professional networking, and interesting engineering challenges.
