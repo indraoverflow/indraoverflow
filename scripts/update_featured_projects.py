@@ -4,9 +4,11 @@ import os
 import re
 import urllib.request
 import json
+from datetime import date
 
 USERNAME = "indraoverflow"
 README = "README.md"
+START_YEAR = 2014  # adjust to actual career start year
 RECENT_START = "<!-- RECENT_CONTRIBUTIONS:START -->"
 RECENT_END = "<!-- RECENT_CONTRIBUTIONS:END -->"
 FEATURED_START = "<!-- FEATURED_PROJECTS:START -->"
@@ -112,6 +114,10 @@ with open(README, "r", encoding="utf-8") as f:
 content = update_section(content, RECENT_START, RECENT_END, recent_body)
 content = update_section(content, FEATURED_START, FEATURED_END, featured_body)
 content = update_section(content, TECH_START, TECH_END, tech_body)
+
+# Update years of experience dynamically
+years = date.today().year - START_YEAR
+content = re.sub(r"\d+\+ years of experience", f"{years}+ years of experience", content)
 
 with open(README, "w", encoding="utf-8") as f:
     f.write(content)
