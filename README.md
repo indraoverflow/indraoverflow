@@ -61,13 +61,9 @@ _Last updated: auto-generated_
 <!-- FEATURED_PROJECTS:START -->
 ## 📌 Featured Projects
 
-_Repositories where my pull requests were merged._
+_External repositories where my pull requests were merged._
 
-- **[indraoverflow/balaka](https://github.com/indraoverflow/balaka)**
-- **[awarexone/Agentic-Bug-Hunter](https://github.com/awarexone/Agentic-Bug-Hunter)**
-- **[indraoverflow/weserve-hosting-tailwind](https://github.com/indraoverflow/weserve-hosting-tailwind)**
-- **[indraoverflow/backend-wis-mulai-hidup](https://github.com/indraoverflow/backend-wis-mulai-hidup)**
-- **[indraoverflow/frontend-wis-mulai-hidup](https://github.com/indraoverflow/frontend-wis-mulai-hidup)**
+- **[awarexone/Agentic-Bug-Hunter](https://github.com/awarexone/Agentic-Bug-Hunter)** — fix(install): resolve split repo layout, anchor to script dir, fail loud ([PR](https://github.com/awarexone/Agentic-Bug-Hunter/pull/161))
 <!-- FEATURED_PROJECTS:END -->
 
 ---
