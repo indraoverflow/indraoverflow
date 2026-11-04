@@ -33,7 +33,7 @@ and contributing to the open-source community.
 <!-- RECENT_CONTRIBUTIONS:START -->
 ## 🔄 Recent Contributions
 
-_Last updated: auto-generated_ 
+_Last updated: auto-generated_
 
 - [docs: update professional positioning and intro](https://github.com/indraoverflow/indraoverflow/pull/1) — `indraoverflow/indraoverflow` (open)
 - [fix(run-dispatch): bound and de-correlate provider_quota_recovery retry release](https://github.com/paperclipai/paperclip/pull/14391) — `paperclipai/paperclip` (open)
@@ -58,11 +58,17 @@ _Last updated: auto-generated_
 
 ---
 
+<!-- FEATURED_PROJECTS:START -->
 ## 📌 Featured Projects
 
-- **[FreeLLMAPI](https://github.com/tashfeenahmed/freellmapi)** — Contributed fixes for OpenAI-compatible custom endpoints and Antigravity provider support.
-- **[Paperclip](https://github.com/paperclipai/paperclip)** — Contributed a fix to bound and de-correlate provider quota recovery retries.
-- **Homelab Stack** — Self-hosted services, monitoring, and automation.
+_Repositories where my pull requests were merged._
+
+- **[indraoverflow/balaka](https://github.com/indraoverflow/balaka)**
+- **[awarexone/Agentic-Bug-Hunter](https://github.com/awarexone/Agentic-Bug-Hunter)**
+- **[indraoverflow/weserve-hosting-tailwind](https://github.com/indraoverflow/weserve-hosting-tailwind)**
+- **[indraoverflow/backend-wis-mulai-hidup](https://github.com/indraoverflow/backend-wis-mulai-hidup)**
+- **[indraoverflow/frontend-wis-mulai-hidup](https://github.com/indraoverflow/frontend-wis-mulai-hidup)**
+<!-- FEATURED_PROJECTS:END -->
 
 ---
 
