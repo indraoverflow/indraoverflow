@@ -2,7 +2,7 @@
 
 ### Senior Software Engineer | Backend Engineering | DevOps
 
-Software Engineer with 14+ years of experience building
+Software Engineer with 12+ years of experience building
 backend systems, enterprise applications, and scalable
 technology solutions.
 
@@ -33,8 +33,9 @@ and contributing to the open-source community.
 <!-- RECENT_CONTRIBUTIONS:START -->
 ## 🔄 Recent Contributions
 
-_Last updated: 05 November 2026, 03:05 GMT+7_
+_Last updated: 05 November 2026, 09:47 GMT+7_
 
+- [docs: add GitHub Copilot CLI uninstall instructions](https://github.com/DietrichGebert/ponytail/pull/1350) : `DietrichGebert/ponytail` (open)
 - [fix: Update filesystem boundary in codex/SKILL.md](https://github.com/garrytan/gstack/pull/3995) : `garrytan/gstack` (closed)
 - [fix(question-log): stamp ts server-side to prevent backdating](https://github.com/garrytan/gstack/pull/3993) : `garrytan/gstack` (closed)
 - [fix(run-dispatch): bound and de-correlate provider_quota_recovery retry release](https://github.com/paperclipai/paperclip/pull/14391) : `paperclipai/paperclip` (open)
