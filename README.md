@@ -33,23 +33,24 @@ and contributing to the open-source community.
 <!-- RECENT_CONTRIBUTIONS:START -->
 ## 🔄 Recent Contributions
 
-_Last updated: 05 November 2026, 11:13 GMT+7_
+_Last updated: 06 November 2026, 11:11 GMT+7_
 
+- [Sync: code scanning fixes and feature updates](https://github.com/artivisi/balaka/pull/42) : `artivisi/balaka` (open)
+- [fix(free-ci-health): a split shard's overrun compares wall time with its per-job prediction (#3851)](https://github.com/garrytan/gstack/pull/4051) : `garrytan/gstack` (open)
+- [fix(review): check every use of the owner before calling code dead](https://github.com/DietrichGebert/ponytail/pull/1360) : `DietrichGebert/ponytail` (open)
+- [fix: nav link 'Log Audit' points to /settings/audit-logs instead of /audit-log](https://github.com/artivisi/balaka/pull/39) : `artivisi/balaka` (closed)
+- [fix(run-dispatch): bound and de-correlate provider_quota_recovery retry release](https://github.com/paperclipai/paperclip/pull/14391) : `paperclipai/paperclip` (open)
+- [fix(codex): name only the skill install paths in the filesystem boundary (#3924)](https://github.com/garrytan/gstack/pull/4037) : `garrytan/gstack` (open)
 - [docs: add GitHub Copilot CLI uninstall instructions](https://github.com/DietrichGebert/ponytail/pull/1350) : `DietrichGebert/ponytail` (open)
 - [fix: Update filesystem boundary in codex/SKILL.md](https://github.com/garrytan/gstack/pull/3995) : `garrytan/gstack` (closed)
 - [fix(question-log): stamp ts server-side to prevent backdating](https://github.com/garrytan/gstack/pull/3993) : `garrytan/gstack` (closed)
-- [fix(run-dispatch): bound and de-correlate provider_quota_recovery retry release](https://github.com/paperclipai/paperclip/pull/14391) : `paperclipai/paperclip` (open)
 - [feat: add Google Antigravity (Cloud Code Assist) provider with OAuth login](https://github.com/tashfeenahmed/freellmapi/pull/1815) : `tashfeenahmed/freellmapi` (open)
 - [fix(openai-compat): send stream:false for non-streaming chat completions](https://github.com/tashfeenahmed/freellmapi/pull/1811) : `tashfeenahmed/freellmapi` (open)
 - [feat: MFA, security hardening, storage, document multi-upload, and code scanning fixes](https://github.com/artivisi/balaka/pull/40) : `artivisi/balaka` (open)
-- [fix: nav link 'Log Audit' points to /settings/audit-logs instead of /audit-log](https://github.com/artivisi/balaka/pull/39) : `artivisi/balaka` (open)
-- [Sync: code scanning fixes and feature updates](https://github.com/artivisi/balaka/pull/42) : `artivisi/balaka` (open)
 - [Sync: code scanning fixes and feature updates](https://github.com/artivisi/balaka/pull/41) : `artivisi/balaka` (closed)
 - [fix(run-dispatch): bound and jitter provider_quota_recovery retry release](https://github.com/paperclipai/paperclip/pull/14389) : `paperclipai/paperclip` (closed)
 - [fix(install): resolve split repo layout, anchor to script dir, fail loud](https://github.com/awarexone/Agentic-Bug-Hunter/pull/161) : `awarexone/Agentic-Bug-Hunter` (closed (merged))
 - [fix(hackerone-mcp): update Team GraphQL query for removed H1 fields](https://github.com/awarexone/Agentic-Bug-Hunter/pull/164) : `awarexone/Agentic-Bug-Hunter` (closed (merged))
-- [fix(docs): correct install_tools.sh path, add doc-path regression test](https://github.com/awarexone/Agentic-Bug-Hunter/pull/163) : `awarexone/Agentic-Bug-Hunter` (closed (merged))
-- [fix(tools): point _dep_hint fallback at a path that exists](https://github.com/awarexone/Agentic-Bug-Hunter/pull/162) : `awarexone/Agentic-Bug-Hunter` (closed (merged))
 <!-- RECENT_CONTRIBUTIONS:END -->
 
 ---
