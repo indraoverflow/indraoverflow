@@ -53,9 +53,10 @@ else:
             continue
         title = it.get("title", "").strip()
         html_url = it.get("html_url", "")
-        state = it.get("state", "")
-        merged = " (merged)" if it.get("pull_request", {}).get("merged_at") else ""
-        recent_lines.append(f"- [{title}]({html_url}) : `{repo}` ({state}{merged})")
+        # GitHub reports a merged pull request as state "closed"; showing both
+        # produced "(closed (merged))" on every line.
+        status = "merged" if it.get("pull_request", {}).get("merged_at") else it.get("state", "")
+        recent_lines.append(f"- [{title}]({html_url}) : `{repo}` ({status})")
 recent_body = "\n".join(recent_lines)
 
 # Featured projects (merged PRs, deduped by repo)
@@ -64,11 +65,22 @@ merged_data = fetch(
     f"?q=author:{USERNAME}+type:pr+is:merged&sort=updated&order=desc&per_page=30"
 )
 merged_items = merged_data.get("items", [])
+
+# The newest merged PR is not always the one worth showing: a repository can end
+# up with a one-line chore sitting on top of the work that actually matters, and
+# the recency sort would surface the chore. Pin the PR that represents the
+# project. A pin can never invent a contribution, because the repository still
+# has to appear in the merged list below.
+PINNED = {
+    "qansaid/agentdiet": ("feat(website): add the AgentDiet product site", 1),
+}
+
 seen = set()
-featured_lines = ["## 📌 Featured Projects", "", "_External repositories where my pull requests were merged._", ""]
+featured_lines = ["## 📌 Featured Projects", "", "_Repositories where my pull requests were merged._", ""]
 if not merged_items:
     featured_lines.append("_No merged contributions yet._")
 else:
+    entries = []
     for it in merged_items:
         repo = it.get("repository_url", "").split("/repos/")[-1]
         if repo.startswith(f"{USERNAME}/"):
@@ -76,10 +88,16 @@ else:
         if repo in seen:
             continue
         seen.add(repo)
-        html_url = "https://github.com/" + repo
         pr_title = it.get("title", "").strip()
         pr_url = it.get("html_url", "")
-        featured_lines.append(f"- **[{repo}]({html_url})** — {pr_title} ([PR]({pr_url}))")
+        pinned = PINNED.get(repo)
+        if pinned:
+            pr_title, number = pinned
+            pr_url = f"https://github.com/{repo}/pull/{number}"
+        entries.append((repo not in PINNED, repo, pr_title, pr_url))
+    entries.sort(key=lambda e: e[0])  # stable: pinned first, then by recency
+    for _, repo, pr_title, pr_url in entries:
+        featured_lines.append(f"- **[{repo}](https://github.com/{repo})**: {pr_title} ([PR]({pr_url}))")
 featured_body = "\n".join(featured_lines)
 
 # Tech stack (recommended curated format)

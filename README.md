@@ -100,8 +100,14 @@ _Excerpt: the scoped, on-demand and config sections plus four remaining findings
 <!-- RECENT_CONTRIBUTIONS:START -->
 ## 🔄 Recent Contributions
 
-_Last updated: 07 November 2026, 10:43 GMT+7_
+_Last updated: 07 November 2026, 14:26 GMT+7_
 
+- [chore: add a Sponsor button pointing at GitHub Sponsors](https://github.com/qansaid/agentdiet/pull/6) : `qansaid/agentdiet` (merged)
+- [fix(website): override minimatch under typescript-eslint](https://github.com/qansaid/agentdiet/pull/5) : `qansaid/agentdiet` (merged)
+- [docs(site): replace prose em dashes with ordinary punctuation](https://github.com/qansaid/agentdiet/pull/4) : `qansaid/agentdiet` (merged)
+- [docs(readme): add a theme-aware banner, pipeline diagram and collapsible reference](https://github.com/qansaid/agentdiet/pull/3) : `qansaid/agentdiet` (merged)
+- [chore(deploy): script and document the Cloudflare Tunnel deployment](https://github.com/qansaid/agentdiet/pull/2) : `qansaid/agentdiet` (merged)
+- [feat(website): add the AgentDiet product site](https://github.com/qansaid/agentdiet/pull/1) : `qansaid/agentdiet` (merged)
 - [fix(free-ci-health): a split shard's overrun compares wall time with its per-job prediction (#3851)](https://github.com/garrytan/gstack/pull/4051) : `garrytan/gstack` (closed)
 - [Sync: code scanning fixes and feature updates](https://github.com/artivisi/balaka/pull/42) : `artivisi/balaka` (open)
 - [fix(review): check every use of the owner before calling code dead](https://github.com/DietrichGebert/ponytail/pull/1360) : `DietrichGebert/ponytail` (open)
@@ -115,9 +121,6 @@ _Last updated: 07 November 2026, 10:43 GMT+7_
 - [fix(openai-compat): send stream:false for non-streaming chat completions](https://github.com/tashfeenahmed/freellmapi/pull/1811) : `tashfeenahmed/freellmapi` (open)
 - [feat: MFA, security hardening, storage, document multi-upload, and code scanning fixes](https://github.com/artivisi/balaka/pull/40) : `artivisi/balaka` (open)
 - [Sync: code scanning fixes and feature updates](https://github.com/artivisi/balaka/pull/41) : `artivisi/balaka` (closed)
-- [fix(run-dispatch): bound and jitter provider_quota_recovery retry release](https://github.com/paperclipai/paperclip/pull/14389) : `paperclipai/paperclip` (closed)
-- [fix(install): resolve split repo layout, anchor to script dir, fail loud](https://github.com/awarexone/Agentic-Bug-Hunter/pull/161) : `awarexone/Agentic-Bug-Hunter` (closed (merged))
-- [fix(hackerone-mcp): update Team GraphQL query for removed H1 fields](https://github.com/awarexone/Agentic-Bug-Hunter/pull/164) : `awarexone/Agentic-Bug-Hunter` (closed (merged))
 <!-- RECENT_CONTRIBUTIONS:END -->
 
 ---
@@ -142,9 +145,10 @@ _Last updated: 07 November 2026, 10:43 GMT+7_
 <!-- FEATURED_PROJECTS:START -->
 ## 📌 Featured Projects
 
-_External repositories where my pull requests were merged._
+_Repositories where my pull requests were merged._
 
-- **[awarexone/Agentic-Bug-Hunter](https://github.com/awarexone/Agentic-Bug-Hunter)** — fix(install): resolve split repo layout, anchor to script dir, fail loud ([PR](https://github.com/awarexone/Agentic-Bug-Hunter/pull/161))
+- **[qansaid/agentdiet](https://github.com/qansaid/agentdiet)**: feat(website): add the AgentDiet product site ([PR](https://github.com/qansaid/agentdiet/pull/1))
+- **[awarexone/Agentic-Bug-Hunter](https://github.com/awarexone/Agentic-Bug-Hunter)**: fix(install): resolve split repo layout, anchor to script dir, fail loud ([PR](https://github.com/awarexone/Agentic-Bug-Hunter/pull/161))
 <!-- FEATURED_PROJECTS:END -->
 
 ---
