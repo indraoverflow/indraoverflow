@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
 """Generate the theme-aware AgentDiet banner used in the profile README.
 
+Sized at 880x300 because GitHub renders README images at the column width
+(~860px): a 1200px canvas would be scaled to 0.72 and the caption type would
+land around 8px. At 880 the banner displays at roughly 1:1.
+
 Two SVGs, identical geometry, different palette, so the README can pick one with
 <picture> + prefers-color-scheme. The bars animate with CSS transforms; the
-final width lives in the attribute, so any renderer that ignores CSS still shows
-the correct numbers.
+final width lives in the attribute, so a renderer that ignores CSS still shows
+the real numbers.
 """
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parent.parent / "assets"
 
-W, H = 1200, 300
+W, H = 880, 300
 
 DARK = {
     "bg": "#0a0b0d",
@@ -40,27 +44,28 @@ LIGHT = {
 SANS = "'Inter','Segoe UI',system-ui,-apple-system,sans-serif"
 MONO = "'JetBrains Mono','SFMono-Regular',ui-monospace,monospace"
 
-CARD_X, CARD_Y, CARD_W, CARD_H = 644, 40, 512, 220
-INNER = 28
-BAR_W = CARD_W - INNER * 2
+CARD_X, CARD_Y, CARD_W, CARD_H = 496, 34, 344, 232
+PAD = 24
+BAR_W = CARD_W - PAD * 2
 BEFORE, AFTER = 6770, 711
 AFTER_W = round(BAR_W * AFTER / BEFORE, 1)
 
 
-def bars(x, y, w, h, fill, delay):
+def bar(x, y, w, h, fill, delay):
     """Track plus a fill that grows from the left when CSS is available."""
-    return f"""
-    <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{h / 2}" fill="{{track}}"/>
-    <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{h / 2}" fill="{fill}"
-          style="transform-origin:{x}px {y}px;animation:grow .9s cubic-bezier(.22,1,.36,1) {delay}s both"/>"""
+    return (
+        f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{h / 2}" fill="{{track}}"/>'
+        f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{h / 2}" fill="{fill}" '
+        f'style="transform-origin:{x}px {y}px;animation:grow .9s cubic-bezier(.22,1,.36,1) {delay}s both"/>'
+    )
 
 
 def svg(p):
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img"
-     aria-label="AgentDiet: measures the always-on context an AI coding agent loads. In a simulated repository, always-on tokens drop from 6,770 at grade C to 711 at grade A, an 89.5 percent reduction.">
+     aria-label="AgentDiet: always-on agent context in a simulated repository drops from 6,770 tokens at grade C to 711 tokens at grade A, an 89.5 percent reduction.">
   <defs>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40" fill="none" stroke="{p['grid']}" stroke-width="1"/>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="{p['grid']}" stroke-width="1"/>
     </pattern>
     <style>
       text {{ font-family: {SANS}; }}
@@ -74,46 +79,47 @@ def svg(p):
     </style>
   </defs>
 
-  <rect width="{W}" height="{H}" rx="18" fill="{p['bg']}"/>
-  <rect width="{W}" height="{H}" rx="18" fill="url(#grid)" opacity=".75"/>
-  <rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="18" fill="none" stroke="{p['line']}"/>
+  <rect width="{W}" height="{H}" rx="16" fill="{p['bg']}"/>
+  <rect width="{W}" height="{H}" rx="16" fill="url(#grid)" opacity=".7"/>
+  <rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="16" fill="none" stroke="{p['line']}"/>
 
   <!-- mark: three instruction lines, the fat trimmed -->
-  <g transform="translate(56,52)">
-    <rect width="26" height="3.6" rx="1.8" fill="{p['fg']}"/>
-    <rect y="7.4" width="17" height="3.6" rx="1.8" fill="{p['fg']}" opacity=".45"/>
-    <rect y="14.8" width="9" height="3.6" rx="1.8" fill="{p['accent']}"/>
+  <g transform="translate(40,42)">
+    <rect width="24" height="3.4" rx="1.7" fill="{p['fg']}"/>
+    <rect y="7" width="16" height="3.4" rx="1.7" fill="{p['fg']}" opacity=".45"/>
+    <rect y="14" width="8.5" height="3.4" rx="1.7" fill="{p['accent']}"/>
   </g>
-  <text x="56" y="122" font-size="42" font-weight="600" letter-spacing="-1.6" fill="{p['fg']}">AgentDiet</text>
+  <text x="40" y="112" font-size="34" font-weight="600" letter-spacing="-1.2" fill="{p['fg']}">AgentDiet</text>
 
-  <text x="56" y="162" font-size="17" fill="{p['muted']}">Measure the context your AI coding agent loads</text>
-  <text x="56" y="186" font-size="17" fill="{p['muted']}">before you type a single word — then cut it.</text>
+  <text x="40" y="148" font-size="14.5" fill="{p['muted']}">Measure the context your AI coding agent loads</text>
+  <text x="40" y="170" font-size="14.5" fill="{p['muted']}">before you type a single word — then cut it.</text>
 
-  <text x="56" y="228" font-size="12.5" fill="{p['faint']}" class="mono">go install github.com/qansaid/agentdiet@latest</text>
+  <text x="40" y="212" font-size="11.5" fill="{p['faint']}" class="mono">go install github.com/qansaid/agentdiet@latest</text>
 
   <g class="mono">
-    <circle cx="60" cy="256" r="3" fill="{p['accent']}" class="dot"/>
-    <text x="72" y="260" font-size="11" fill="{p['faint']}">MIT · Go 1.22+ · single static binary · no account · no network calls</text>
+    <circle cx="43" cy="238" r="3" fill="{p['accent']}" class="dot"/>
+    <text x="54" y="242" font-size="10.5" fill="{p['faint']}">MIT · Go 1.22+ · static binary · no account</text>
   </g>
 
   <!-- report card -->
-  <rect x="{CARD_X}" y="{CARD_Y}" width="{CARD_W}" height="{CARD_H}" rx="14" fill="{p['panel']}" stroke="{p['line']}"/>
-  <text x="{CARD_X + INNER}" y="{CARD_Y + 34}" font-size="11" fill="{p['faint']}" class="mono" letter-spacing=".6">AGENT CONTEXT · ACME-PLATFORM</text>
-  <rect x="{CARD_X + CARD_W - INNER - 74}" y="{CARD_Y + 19}" width="74" height="21" rx="5" fill="{p['warn']}" fill-opacity=".12" stroke="{p['warn']}" stroke-opacity=".45"/>
-  <text x="{CARD_X + CARD_W - INNER - 61}" y="{CARD_Y + 34}" font-size="10.5" fill="{p['warn']}" class="mono">C → A</text>
+  <rect x="{CARD_X}" y="{CARD_Y}" width="{CARD_W}" height="{CARD_H}" rx="12" fill="{p['panel']}" stroke="{p['line']}"/>
+  <text x="{CARD_X + PAD}" y="{CARD_Y + 32}" font-size="9.5" fill="{p['faint']}" class="mono" letter-spacing=".5">AGENT CONTEXT · ACME</text>
+  <rect x="{CARD_X + CARD_W - PAD - 62}" y="{CARD_Y + 18}" width="62" height="19" rx="4"
+        fill="{p['warn']}" fill-opacity=".12" stroke="{p['warn']}" stroke-opacity=".45"/>
+  <text x="{CARD_X + CARD_W - PAD - 51}" y="{CARD_Y + 31}" font-size="9.5" fill="{p['warn']}" class="mono">C → A</text>
 
-  <text x="{CARD_X + INNER}" y="{CARD_Y + 72}" font-size="10.5" fill="{p['faint']}" class="mono">BEFORE</text>
-  <text x="{CARD_X + CARD_W - INNER}" y="{CARD_Y + 74}" font-size="17" fill="{p['fg']}" class="mono" text-anchor="end">6,770</text>
-  {bars(CARD_X + INNER, CARD_Y + 84, BAR_W, 8, p['warn'], 0.1)}
+  <text x="{CARD_X + PAD}" y="{CARD_Y + 70}" font-size="9.5" fill="{p['faint']}" class="mono">BEFORE</text>
+  <text x="{CARD_X + CARD_W - PAD}" y="{CARD_Y + 72}" font-size="15" fill="{p['fg']}" class="mono" text-anchor="end">6,770</text>
+  {bar(CARD_X + PAD, CARD_Y + 82, BAR_W, 7, p['warn'], 0.1)}
 
-  <text x="{CARD_X + INNER}" y="{CARD_Y + 128}" font-size="10.5" fill="{p['faint']}" class="mono">AFTER</text>
-  <text x="{CARD_X + CARD_W - INNER}" y="{CARD_Y + 130}" font-size="17" fill="{p['accent']}" class="mono" text-anchor="end">711</text>
-  {bars(CARD_X + INNER, CARD_Y + 140, AFTER_W, 8, p['accent'], 0.35)}
-  <line x1="{CARD_X + INNER + AFTER_W + 6}" y1="{CARD_Y + 144}" x2="{CARD_X + INNER + BAR_W}" y2="{CARD_Y + 144}"
+  <text x="{CARD_X + PAD}" y="{CARD_Y + 124}" font-size="9.5" fill="{p['faint']}" class="mono">AFTER</text>
+  <text x="{CARD_X + CARD_W - PAD}" y="{CARD_Y + 126}" font-size="15" fill="{p['accent']}" class="mono" text-anchor="end">711</text>
+  {bar(CARD_X + PAD, CARD_Y + 136, AFTER_W, 7, p['accent'], 0.35)}
+  <line x1="{CARD_X + PAD + AFTER_W + 6}" y1="{CARD_Y + 139.5}" x2="{CARD_X + PAD + BAR_W}" y2="{CARD_Y + 139.5}"
         stroke="{p['track']}" stroke-width="1" stroke-dasharray="2 5"/>
 
-  <text x="{CARD_X + INNER}" y="{CARD_Y + 176}" font-size="13" fill="{p['accent']}" class="mono">−89.5% always-on tokens</text>
-  <text x="{CARD_X + INNER}" y="{CARD_Y + 200}" font-size="11" fill="{p['faint']}" class="mono">simulated repository · real report output</text>
+  <text x="{CARD_X + PAD}" y="{CARD_Y + 174}" font-size="12" fill="{p['accent']}" class="mono">−89.5% always-on tokens</text>
+  <text x="{CARD_X + PAD}" y="{CARD_Y + 200}" font-size="9.5" fill="{p['faint']}" class="mono">simulated repo · real report output</text>
 </svg>
 """
 
@@ -121,10 +127,9 @@ def svg(p):
 def main() -> None:
     OUT.mkdir(exist_ok=True)
     for name, palette in (("agentdiet-dark.svg", DARK), ("agentdiet-light.svg", LIGHT)):
-        path = OUT / name
         body = svg(palette).replace("{track}", palette["track"])
-        path.write_text(body, encoding="utf-8")
-        print(f"wrote {path} ({len(body)} bytes)")
+        (OUT / name).write_text(body, encoding="utf-8")
+        print(f"wrote {OUT / name} ({len(body)} bytes)")
 
 
 if __name__ == "__main__":
