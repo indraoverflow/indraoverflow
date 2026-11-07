@@ -66,38 +66,59 @@ merged_data = fetch(
 )
 merged_items = merged_data.get("items", [])
 
-# The newest merged PR is not always the one worth showing: a repository can end
-# up with a one-line chore sitting on top of the work that actually matters, and
-# the recency sort would surface the chore. Pin the PR that represents the
-# project. A pin can never invent a contribution, because the repository still
-# has to appear in the merged list below.
+# Two things the author query cannot express, both kept explicit.
+#
+# PINNED: a repository where the newest merged PR is not the one worth showing,
+# because a one-line chore landed on top of the real work. The repository still
+# has to appear in the merged list, so a pin can never invent a contribution.
 PINNED = {
     "qansaid/agentdiet": ("feat(website): add the AgentDiet product site", 1),
 }
 
-seen = set()
-featured_lines = ["## 📌 Featured Projects", "", "_Repositories where my pull requests were merged._", ""]
-if not merged_items:
+# CREDITED: work merged by someone else that credits this account. A pull
+# request can carry a Co-authored-by trailer without being yours, and the search
+# query only matches authors. Each entry carries the form the credit takes, so
+# the section never implies authorship it does not have.
+CREDITED = [
+    (
+        "garrytan/gstack",
+        4085,
+        "free-ci-health: a split shard's overrun compares wall time with its prediction over jobs (GST-1653)",
+        "co-author on 5e2964d",
+    ),
+]
+
+featured_lines = ["## 📌 Featured Projects", "", "_Repositories where my work was merged._", ""]
+
+generated = {}
+order = []
+for it in merged_items:
+    repo = it.get("repository_url", "").split("/repos/")[-1]
+    if repo.startswith(f"{USERNAME}/") or repo in generated:
+        continue
+    generated[repo] = (it.get("title", "").strip(), it.get("html_url", ""))
+    order.append(repo)
+
+rows = []
+for repo, (pr_title, number) in PINNED.items():
+    if repo in generated:
+        rows.append((repo, pr_title, f"https://github.com/{repo}/pull/{number}", None))
+        order.remove(repo)
+for repo, number, pr_title, note in CREDITED:
+    rows.append((repo, pr_title, f"https://github.com/{repo}/pull/{number}", note))
+    if repo in order:
+        order.remove(repo)
+for repo in order:
+    pr_title, pr_url = generated[repo]
+    rows.append((repo, pr_title, pr_url, None))
+
+if not rows:
     featured_lines.append("_No merged contributions yet._")
-else:
-    entries = []
-    for it in merged_items:
-        repo = it.get("repository_url", "").split("/repos/")[-1]
-        if repo.startswith(f"{USERNAME}/"):
-            continue
-        if repo in seen:
-            continue
-        seen.add(repo)
-        pr_title = it.get("title", "").strip()
-        pr_url = it.get("html_url", "")
-        pinned = PINNED.get(repo)
-        if pinned:
-            pr_title, number = pinned
-            pr_url = f"https://github.com/{repo}/pull/{number}"
-        entries.append((repo not in PINNED, repo, pr_title, pr_url))
-    entries.sort(key=lambda e: e[0])  # stable: pinned first, then by recency
-    for _, repo, pr_title, pr_url in entries:
-        featured_lines.append(f"- **[{repo}](https://github.com/{repo})**: {pr_title} ([PR]({pr_url}))")
+for repo, pr_title, pr_url, note in rows:
+    entry = f"- **[{repo}](https://github.com/{repo})**: {pr_title}"
+    entry += f" ({note}, [PR]({pr_url}))" if note else f" ([PR]({pr_url}))"
+    featured_lines.append(entry)
+
 featured_body = "\n".join(featured_lines)
 
 # Tech stack (recommended curated format)
@@ -131,4 +152,4 @@ content = re.sub(r"\d+\+ years of experience", f"{years}+ years of experience", 
 with open(README, "w", encoding="utf-8") as f:
     f.write(content)
 
-print(f"Updated {len(recent_items)} recent contributions and {len(seen)} featured projects.")
+print(f"Updated {len(recent_items)} recent contributions and {len(rows)} featured projects.")

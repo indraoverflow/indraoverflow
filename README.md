@@ -100,7 +100,7 @@ _Excerpt: the scoped, on-demand and config sections plus four remaining findings
 <!-- RECENT_CONTRIBUTIONS:START -->
 ## 🔄 Recent Contributions
 
-_Last updated: 07 November 2026, 14:26 GMT+7_
+_Last updated: 07 November 2026, 14:32 GMT+7_
 
 - [chore: add a Sponsor button pointing at GitHub Sponsors](https://github.com/qansaid/agentdiet/pull/6) : `qansaid/agentdiet` (merged)
 - [fix(website): override minimatch under typescript-eslint](https://github.com/qansaid/agentdiet/pull/5) : `qansaid/agentdiet` (merged)
@@ -145,9 +145,10 @@ _Last updated: 07 November 2026, 14:26 GMT+7_
 <!-- FEATURED_PROJECTS:START -->
 ## 📌 Featured Projects
 
-_Repositories where my pull requests were merged._
+_Repositories where my work was merged._
 
 - **[qansaid/agentdiet](https://github.com/qansaid/agentdiet)**: feat(website): add the AgentDiet product site ([PR](https://github.com/qansaid/agentdiet/pull/1))
+- **[garrytan/gstack](https://github.com/garrytan/gstack)**: free-ci-health: a split shard's overrun compares wall time with its prediction over jobs (GST-1653) (co-author on 5e2964d, [PR](https://github.com/garrytan/gstack/pull/4085))
 - **[awarexone/Agentic-Bug-Hunter](https://github.com/awarexone/Agentic-Bug-Hunter)**: fix(install): resolve split repo layout, anchor to script dir, fail loud ([PR](https://github.com/awarexone/Agentic-Bug-Hunter/pull/161))
 <!-- FEATURED_PROJECTS:END -->
 
