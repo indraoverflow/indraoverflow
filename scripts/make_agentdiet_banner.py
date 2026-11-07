@@ -92,7 +92,7 @@ def svg(p):
   <text x="40" y="112" font-size="34" font-weight="600" letter-spacing="-1.2" fill="{p['fg']}">AgentDiet</text>
 
   <text x="40" y="148" font-size="14.5" fill="{p['muted']}">Measure the context your AI coding agent loads</text>
-  <text x="40" y="170" font-size="14.5" fill="{p['muted']}">before you type a single word — then cut it.</text>
+  <text x="40" y="170" font-size="14.5" fill="{p['muted']}">before you type a single word, then cut it.</text>
 
   <text x="40" y="212" font-size="11.5" fill="{p['faint']}" class="mono">go install github.com/qansaid/agentdiet@latest</text>
 

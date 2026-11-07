@@ -31,7 +31,7 @@ and contributing to the open-source community.
 ---
 
 <!-- AGENTDIET:START -->
-## 🧪 Building in the open — AgentDiet
+## 🧪 Building in the open: AgentDiet
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/agentdiet-dark.svg">
@@ -47,18 +47,18 @@ and contributing to the open-source community.
   <a href="https://github.com/qansaid/agentdiet/actions/workflows/ci.yml"><img src="https://github.com/qansaid/agentdiet/actions/workflows/ci.yml/badge.svg" alt="CI status"></a>
 </p>
 
-Every AI coding agent loads a set of instruction files **on every request**, before you type anything: `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, `copilot-instructions.md`. They grow by accretion — a rule per incident, a table per architecture decision — until thousands of tokens of stale policy are paid for on every prompt.
+Every AI coding agent loads a set of instruction files **on every request**, before you type anything: `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, `copilot-instructions.md`. They grow by accretion: a rule per incident, a table per architecture decision. Then thousands of tokens of stale policy are paid for on every prompt.
 
 **AgentDiet** is a single static Go binary that measures that bill, shows what to cut, and enforces a budget in CI. No account, no API key, no network calls.
 
 | Aspect | Detail |
 | --- | --- |
-| **The blind spot** | A 40 KB skill costs nothing until it is opened; a 40 KB `AGENTS.md` is paid for on every request. Tools that report one total cannot tell the two apart. |
-| **The measurement** | Four tiers kept separate — always-on, scoped, on-demand, config — plus verbatim duplicates, ≥60% near-duplicates, oversize files and the declared MCP tool surface. |
+| **The blind spot** | A 40 KB skill costs nothing until it is opened. A 40 KB `AGENTS.md` is paid for on every request, and tools that report one total cannot tell the two apart. |
+| **The measurement** | Four tiers kept separate (always-on, scoped, on-demand, config), plus verbatim duplicates, ≥60% near-duplicates, oversize files and the declared MCP tool surface. |
 | **The gate** | `agentdiet --max-tokens 4000` exits 1 when the always-on tax grows, so the number can only shrink on purpose. |
 
 <details>
-<summary><b>▸ See a real report</b> — simulated repository, verbatim output (excerpt)</summary>
+<summary><b>See a real report</b>: simulated repository, verbatim output</summary>
 
 <br>
 
@@ -80,9 +80,11 @@ FINDINGS
     → keep the text in one file and point at it from the others
   · AGENTS.md is 100% contained in CLAUDE.md
     → keep one canonical file; the other should be a pointer, not a copy
-  · 6 MCP servers declared (github, jira, playwright, postgres, sentry, slack)
-    → disable servers you do not use in this repo — a schema cost on every connect
+  · 6 MCP servers declared (github, jira, playwright, postgres, sentry, slack); tool schemas enter the prompt on connect
+    → disable servers you do not use in this repo — schema cost scales with tool count
 ```
+
+_Excerpt: the scoped, on-demand and config sections plus four remaining findings are trimmed. The file rows, totals and findings above are copied verbatim from a run of the compiled binary._
 
 </details>
 

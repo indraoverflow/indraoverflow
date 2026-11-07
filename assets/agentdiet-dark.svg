@@ -29,7 +29,7 @@
   <text x="40" y="112" font-size="34" font-weight="600" letter-spacing="-1.2" fill="#f4f5f7">AgentDiet</text>
 
   <text x="40" y="148" font-size="14.5" fill="#969ca5">Measure the context your AI coding agent loads</text>
-  <text x="40" y="170" font-size="14.5" fill="#969ca5">before you type a single word — then cut it.</text>
+  <text x="40" y="170" font-size="14.5" fill="#969ca5">before you type a single word, then cut it.</text>
 
   <text x="40" y="212" font-size="11.5" fill="#7d848e" class="mono">go install github.com/qansaid/agentdiet@latest</text>
 
