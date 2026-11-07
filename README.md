@@ -51,7 +51,7 @@ Every AI coding agent loads a set of instruction files **on every request**, bef
 
 **AgentDiet** is a single static Go binary that measures that bill, shows what to cut, and enforces a budget in CI. No account, no API key, no network calls.
 
-|  |  |
+| Aspect | Detail |
 | --- | --- |
 | **The blind spot** | A 40 KB skill costs nothing until it is opened; a 40 KB `AGENTS.md` is paid for on every request. Tools that report one total cannot tell the two apart. |
 | **The measurement** | Four tiers kept separate — always-on, scoped, on-demand, config — plus verbatim duplicates, ≥60% near-duplicates, oversize files and the declared MCP tool surface. |
