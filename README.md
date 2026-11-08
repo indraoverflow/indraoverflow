@@ -100,11 +100,9 @@ _Excerpt: the scoped, on-demand and config sections plus four remaining findings
 <!-- RECENT_CONTRIBUTIONS:START -->
 ## 🔄 Recent Contributions
 
-_Last updated: 08 November 2026, 10:20 GMT+7_
+_Last updated: 08 November 2026, 10:32 GMT+7_
 
-- [feat(helm): check for ServiceMonitor GVK](https://github.com/external-secrets/external-secrets/pull/7254) : `external-secrets/external-secrets` (closed)
 - [fix(norm): fill in defaults for in-tree volume types (rbd, scaleIO, azureDisk)](https://github.com/GillMacedo/wontpatch/pull/5) : `GillMacedo/wontpatch` (open)
-- [🐛 fix(cli): accept --yes on ship stack sync](https://github.com/GregoireF/ship-it/pull/108) : `GregoireF/ship-it` (open)
 - [feat(site): shed load globally and bucket by subnet](https://github.com/qansaid/agentdiet/pull/12) : `qansaid/agentdiet` (merged)
 - [feat(site): security headers and an origin rate limiter](https://github.com/qansaid/agentdiet/pull/11) : `qansaid/agentdiet` (merged)
 - [feat: add Google Antigravity (Cloud Code Assist) provider with OAuth login](https://github.com/tashfeenahmed/freellmapi/pull/1815) : `tashfeenahmed/freellmapi` (open)
@@ -117,15 +115,11 @@ _Last updated: 08 November 2026, 10:20 GMT+7_
 - [docs(readme): add a theme-aware banner, pipeline diagram and collapsible reference](https://github.com/qansaid/agentdiet/pull/3) : `qansaid/agentdiet` (merged)
 - [chore(deploy): script and document the Cloudflare Tunnel deployment](https://github.com/qansaid/agentdiet/pull/2) : `qansaid/agentdiet` (merged)
 - [feat(website): add the AgentDiet product site](https://github.com/qansaid/agentdiet/pull/1) : `qansaid/agentdiet` (merged)
-- [fix(free-ci-health): a split shard's overrun compares wall time with its per-job prediction (#3851)](https://github.com/garrytan/gstack/pull/4051) : `garrytan/gstack` (closed)
 - [Sync: code scanning fixes and feature updates](https://github.com/artivisi/balaka/pull/42) : `artivisi/balaka` (open)
 - [fix(review): check every use of the owner before calling code dead](https://github.com/DietrichGebert/ponytail/pull/1360) : `DietrichGebert/ponytail` (open)
-- [fix: nav link 'Log Audit' points to /settings/audit-logs instead of /audit-log](https://github.com/artivisi/balaka/pull/39) : `artivisi/balaka` (closed)
 - [fix(run-dispatch): bound and de-correlate provider_quota_recovery retry release](https://github.com/paperclipai/paperclip/pull/14391) : `paperclipai/paperclip` (open)
 - [fix(codex): name only the skill install paths in the filesystem boundary (#3924)](https://github.com/garrytan/gstack/pull/4037) : `garrytan/gstack` (open)
 - [docs: add GitHub Copilot CLI uninstall instructions](https://github.com/DietrichGebert/ponytail/pull/1350) : `DietrichGebert/ponytail` (open)
-- [fix: Update filesystem boundary in codex/SKILL.md](https://github.com/garrytan/gstack/pull/3995) : `garrytan/gstack` (closed)
-- [fix(question-log): stamp ts server-side to prevent backdating](https://github.com/garrytan/gstack/pull/3993) : `garrytan/gstack` (closed)
 <!-- RECENT_CONTRIBUTIONS:END -->
 
 ---

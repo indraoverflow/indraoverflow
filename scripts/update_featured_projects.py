@@ -51,11 +51,16 @@ else:
         repo = it.get("repository_url", "").split("/repos/")[-1]
         if repo.startswith(f"{USERNAME}/"):
             continue
+        merged_at = it.get("pull_request", {}).get("merged_at")
+        state = it.get("state", "")
+        # Closed (non-merged) PRs are no longer shown in recent contributions.
+        if state == "closed" and not merged_at:
+            continue
         title = it.get("title", "").strip()
         html_url = it.get("html_url", "")
         # GitHub reports a merged pull request as state "closed"; showing both
         # produced "(closed (merged))" on every line.
-        status = "merged" if it.get("pull_request", {}).get("merged_at") else it.get("state", "")
+        status = "merged" if merged_at else state
         recent_lines.append(f"- [{title}]({html_url}) : `{repo}` ({status})")
 recent_body = "\n".join(recent_lines)
 
