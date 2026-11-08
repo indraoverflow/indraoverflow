@@ -9,12 +9,6 @@ from datetime import date, datetime, timezone, timedelta
 USERNAME = "indraoverflow"
 README = "README.md"
 START_YEAR = 2014  # reconciled to 12+ years (AGENTS.md / IND-1 onboarding plan)
-# Repositories hidden from the profile README (e.g. forks the user no longer
-# wants surfaced). Kept explicit so the filter is auditable.
-HIDDEN_REPOS = {
-    "GillMacedo/wontpatch",
-    "GregoireF/ship-it",
-}
 RECENT_START = "<!-- RECENT_CONTRIBUTIONS:START -->"
 RECENT_END = "<!-- RECENT_CONTRIBUTIONS:END -->"
 FEATURED_START = "<!-- FEATURED_PROJECTS:START -->"
@@ -56,8 +50,6 @@ else:
     for it in recent_items:
         repo = it.get("repository_url", "").split("/repos/")[-1]
         if repo.startswith(f"{USERNAME}/"):
-            continue
-        if repo in HIDDEN_REPOS:
             continue
         merged_at = it.get("pull_request", {}).get("merged_at")
         state = it.get("state", "")
@@ -112,7 +104,7 @@ generated = {}
 order = []
 for it in merged_items:
     repo = it.get("repository_url", "").split("/repos/")[-1]
-    if repo.startswith(f"{USERNAME}/") or repo in generated or repo in HIDDEN_REPOS:
+    if repo.startswith(f"{USERNAME}/") or repo in generated:
         continue
     generated[repo] = (it.get("title", "").strip(), it.get("html_url", ""))
     order.append(repo)

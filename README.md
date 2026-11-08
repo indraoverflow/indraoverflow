@@ -100,8 +100,9 @@ _Excerpt: the scoped, on-demand and config sections plus four remaining findings
 <!-- RECENT_CONTRIBUTIONS:START -->
 ## 🔄 Recent Contributions
 
-_Last updated: 08 November 2026, 10:58 GMT+7_
+_Last updated: 08 November 2026, 11:06 GMT+7_
 
+- [fix(norm): fill in defaults for in-tree volume types (rbd, scaleIO, azureDisk)](https://github.com/GillMacedo/wontpatch/pull/5) : `GillMacedo/wontpatch` (open)
 - [feat: add Google Antigravity (Cloud Code Assist) provider with OAuth login](https://github.com/tashfeenahmed/freellmapi/pull/1815) : `tashfeenahmed/freellmapi` (open)
 - [Sync: code scanning fixes and feature updates](https://github.com/artivisi/balaka/pull/42) : `artivisi/balaka` (open)
 - [fix(review): check every use of the owner before calling code dead](https://github.com/DietrichGebert/ponytail/pull/1360) : `DietrichGebert/ponytail` (open)
