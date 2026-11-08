@@ -100,21 +100,10 @@ _Excerpt: the scoped, on-demand and config sections plus four remaining findings
 <!-- RECENT_CONTRIBUTIONS:START -->
 ## 🔄 Recent Contributions
 
-_Last updated: 08 November 2026, 10:32 GMT+7_
+_Last updated: 08 November 2026, 10:36 GMT+7_
 
 - [fix(norm): fill in defaults for in-tree volume types (rbd, scaleIO, azureDisk)](https://github.com/GillMacedo/wontpatch/pull/5) : `GillMacedo/wontpatch` (open)
-- [feat(site): shed load globally and bucket by subnet](https://github.com/qansaid/agentdiet/pull/12) : `qansaid/agentdiet` (merged)
-- [feat(site): security headers and an origin rate limiter](https://github.com/qansaid/agentdiet/pull/11) : `qansaid/agentdiet` (merged)
 - [feat: add Google Antigravity (Cloud Code Assist) provider with OAuth login](https://github.com/tashfeenahmed/freellmapi/pull/1815) : `tashfeenahmed/freellmapi` (open)
-- [docs: scope the duplication figure to the repository, not the session](https://github.com/qansaid/agentdiet/pull/10) : `qansaid/agentdiet` (merged)
-- [docs: measure agent context across 80 public repositories](https://github.com/qansaid/agentdiet/pull/9) : `qansaid/agentdiet` (merged)
-- [feat(scan): detect Nakama profile workspaces](https://github.com/qansaid/agentdiet/pull/8) : `qansaid/agentdiet` (merged)
-- [chore: add a Sponsor button pointing at GitHub Sponsors](https://github.com/qansaid/agentdiet/pull/6) : `qansaid/agentdiet` (merged)
-- [fix(website): override minimatch under typescript-eslint](https://github.com/qansaid/agentdiet/pull/5) : `qansaid/agentdiet` (merged)
-- [docs(site): replace prose em dashes with ordinary punctuation](https://github.com/qansaid/agentdiet/pull/4) : `qansaid/agentdiet` (merged)
-- [docs(readme): add a theme-aware banner, pipeline diagram and collapsible reference](https://github.com/qansaid/agentdiet/pull/3) : `qansaid/agentdiet` (merged)
-- [chore(deploy): script and document the Cloudflare Tunnel deployment](https://github.com/qansaid/agentdiet/pull/2) : `qansaid/agentdiet` (merged)
-- [feat(website): add the AgentDiet product site](https://github.com/qansaid/agentdiet/pull/1) : `qansaid/agentdiet` (merged)
 - [Sync: code scanning fixes and feature updates](https://github.com/artivisi/balaka/pull/42) : `artivisi/balaka` (open)
 - [fix(review): check every use of the owner before calling code dead](https://github.com/DietrichGebert/ponytail/pull/1360) : `DietrichGebert/ponytail` (open)
 - [fix(run-dispatch): bound and de-correlate provider_quota_recovery retry release](https://github.com/paperclipai/paperclip/pull/14391) : `paperclipai/paperclip` (open)

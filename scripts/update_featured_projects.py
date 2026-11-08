@@ -56,6 +56,11 @@ else:
         # Closed (non-merged) PRs are no longer shown in recent contributions.
         if state == "closed" and not merged_at:
             continue
+        repo_owner = repo.split("/", 1)[0]
+        # Merged PRs in repositories owned by the user are already covered by
+        # Featured Projects; do not duplicate them in recent contributions.
+        if merged_at and repo_owner in {USERNAME, "qansaid"}:
+            continue
         title = it.get("title", "").strip()
         html_url = it.get("html_url", "")
         # GitHub reports a merged pull request as state "closed"; showing both
