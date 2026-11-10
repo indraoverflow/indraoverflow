@@ -177,7 +177,7 @@ def age(iso_date):
 
 
 def render_projects():
-    lines = ["| Project | Latest release | Last commit | License |", "| --- | --- | --- | --- |"]
+    lines = ["| Project | Release | Commit | License |", "| --- | --- | --- | --- |"]
     for label, repo in PROJECTS:
         meta = rest(f"/repos/{repo}")
         try:

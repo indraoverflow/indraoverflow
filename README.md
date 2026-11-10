@@ -127,7 +127,7 @@ Stack: Node.js, Express, TypeScript, Prisma, PostgreSQL, JWT, Nodemailer.
 Facts about each flagship repository, refreshed from the GitHub API.
 
 <!-- PROJECTS:START -->
-| Project | Latest release | Last commit | License |
+| Project | Release | Commit | License |
 | --- | --- | --- | --- |
 | [agentdiet](https://github.com/qansaid/agentdiet) | v0.1.8 | yesterday | MIT |
 | [gha-bill](https://github.com/indraoverflow/gha-bill) | none | 4 days ago | MIT |
