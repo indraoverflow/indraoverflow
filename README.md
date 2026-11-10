@@ -4,11 +4,12 @@
   <img src="assets/banner-dark-v2.svg" alt="Indra Prasetya, Senior Software Engineer, backend and platform engineering">
 </picture>
 
+<p align="right"><img src="https://komarev.com/ghpvc/?username=indraoverflow&style=flat-square&color=gray" alt="profile views"></p>
+
 # Indra Prasetya
 
 ### Senior Software Engineer | Backend and Platform Engineering
 
-<p align="right"><img src="https://komarev.com/ghpvc/?username=indraoverflow&style=flat-square&color=gray" alt="profile views"></p>
 
 I am a software engineer working on backend and platform systems. I have been
 building software professionally since 2012, most of it in enterprise
