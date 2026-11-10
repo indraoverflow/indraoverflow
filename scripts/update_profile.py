@@ -20,7 +20,7 @@ from datetime import datetime, timedelta, timezone
 USERNAME = "indraoverflow"
 OWNED_BY = {USERNAME, "qansaid"}
 README = "README.md"
-MAX_ROWS = 5
+MAX_PULL_REQUESTS = 8
 UPDATED_AT = datetime.now(timezone(timedelta(hours=7))).strftime("%Y-%m-%d")
 
 BLOCKS = {
@@ -110,17 +110,32 @@ def merged_pull_requests():
 
 
 def render_contributions(rows):
-    external = [row for row in rows if row["external"]][:MAX_ROWS]
+    """One entry per repository, with its merged pull requests nested below."""
+    external = [row for row in rows if row["external"]][:MAX_PULL_REQUESTS]
     if not external:
         return ["_No merged upstream contributions yet._"]
-    lines = []
+
+    groups = []
+    by_repo = {}
     for row in external:
-        day = row["merged_at"][:10]
-        repo = row["repo"]
-        lines.append(
-            f"- **[{repo}](https://github.com/{repo})**: {row['title']} "
-            f"([#{row['number']}](https://github.com/{repo}/pull/{row['number']}), merged {day})"
-        )
+        if row["repo"] not in by_repo:
+            by_repo[row["repo"]] = []
+            groups.append(row["repo"])
+        by_repo[row["repo"]].append(row)
+
+    lines = []
+    for repo in groups:
+        pulls = by_repo[repo]
+        count = len(pulls)
+        label = "merged pull request" if count == 1 else "merged pull requests"
+        latest = max(pull["merged_at"] for pull in pulls)[:10]
+        lines.append(f"- **[{repo}](https://github.com/{repo})**: {count} {label}, latest {latest}")
+        for pull in sorted(pulls, key=lambda item: item["number"], reverse=True):
+            lines.append(
+                f"  - {pull['title']} "
+                f"([#{pull['number']}](https://github.com/{repo}/pull/{pull['number']}), "
+                f"merged {pull['merged_at'][:10]})"
+            )
     return lines
 
 

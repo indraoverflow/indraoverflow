@@ -136,15 +136,16 @@ Node.js, Express, TypeScript.
 
 Merged pull requests into repositories I do not own.
 
-Most of it so far is in an open-source bug-bounty toolkit: four merged fixes to
-its installer, its HackerOne MCP integration and its documentation, each one
-made after reproducing the failure.
+Most of the merged work so far is in an open-source bug-bounty toolkit: fixes to
+its installer, its HackerOne MCP integration and its documentation, each one made
+after reproducing the failure.
 
 <!-- CONTRIBUTIONS:START -->
-- **[awarexone/Agentic-Bug-Hunter](https://github.com/awarexone/Agentic-Bug-Hunter)**: fix(install): resolve split repo layout, anchor to script dir, fail loud ([#161](https://github.com/awarexone/Agentic-Bug-Hunter/pull/161), merged 2026-09-28)
-- **[awarexone/Agentic-Bug-Hunter](https://github.com/awarexone/Agentic-Bug-Hunter)**: fix(hackerone-mcp): update Team GraphQL query for removed H1 fields ([#164](https://github.com/awarexone/Agentic-Bug-Hunter/pull/164), merged 2026-09-28)
-- **[awarexone/Agentic-Bug-Hunter](https://github.com/awarexone/Agentic-Bug-Hunter)**: fix(docs): correct install_tools.sh path, add doc-path regression test ([#163](https://github.com/awarexone/Agentic-Bug-Hunter/pull/163), merged 2026-09-28)
-- **[awarexone/Agentic-Bug-Hunter](https://github.com/awarexone/Agentic-Bug-Hunter)**: fix(tools): point _dep_hint fallback at a path that exists ([#162](https://github.com/awarexone/Agentic-Bug-Hunter/pull/162), merged 2026-09-28)
+- **[awarexone/Agentic-Bug-Hunter](https://github.com/awarexone/Agentic-Bug-Hunter)**: 4 merged pull requests, latest 2026-09-28
+  - fix(hackerone-mcp): update Team GraphQL query for removed H1 fields ([#164](https://github.com/awarexone/Agentic-Bug-Hunter/pull/164), merged 2026-09-28)
+  - fix(docs): correct install_tools.sh path, add doc-path regression test ([#163](https://github.com/awarexone/Agentic-Bug-Hunter/pull/163), merged 2026-09-28)
+  - fix(tools): point _dep_hint fallback at a path that exists ([#162](https://github.com/awarexone/Agentic-Bug-Hunter/pull/162), merged 2026-09-28)
+  - fix(install): resolve split repo layout, anchor to script dir, fail loud ([#161](https://github.com/awarexone/Agentic-Bug-Hunter/pull/161), merged 2026-09-28)
 <!-- CONTRIBUTIONS:END -->
 
 Also credited: [garrytan/gstack#4085](https://github.com/garrytan/gstack/pull/4085),
@@ -184,10 +185,10 @@ belongs to the maintainer, so it does not appear in the generated list.
 <!-- STATS:START -->
 | Metric | Value |
 | --- | --- |
-| Contributions, last 12 months | 302 |
-| Commits, last 12 months | 74 |
+| Contributions, last 12 months | 307 |
+| Commits, last 12 months | 78 |
 | Pull requests opened, last 12 months | 66 |
-| Private contributions, last 12 months | 143 |
+| Private contributions, last 12 months | 144 |
 | Merged pull requests authored, all time | 50 in 8 repositories |
 | Merged upstream, all time | 4 in 1 repository |
 
