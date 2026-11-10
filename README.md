@@ -176,11 +176,11 @@ belongs to the maintainer, so it does not appear in the generated list.
 <!-- STATS:START -->
 | Metric | Value |
 | --- | --- |
-| Contributions, last 12 months | 288 |
-| Commits, last 12 months | 64 |
+| Contributions, last 12 months | 289 |
+| Commits, last 12 months | 65 |
 | Pull requests opened, last 12 months | 66 |
 | Private contributions, last 12 months | 139 |
-| Merged pull requests authored, all time | 52 in 9 repositories |
+| Merged pull requests authored, all time | 50 in 8 repositories |
 | Merged upstream, all time | 4 in 1 repository |
 
 _Refreshed 2026-11-10 from the GitHub API._
