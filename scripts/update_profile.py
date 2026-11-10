@@ -55,8 +55,21 @@ def graphql(query, variables):
         return {}
 
 
+_visibility = {}
+
+
+def is_public(repo):
+    """Private repositories are excluded: a visitor cannot verify work they cannot see."""
+    if repo not in _visibility:
+        try:
+            _visibility[repo] = not rest(f"/repos/{repo}").get("private", False)
+        except (urllib.error.HTTPError, urllib.error.URLError, ValueError):
+            _visibility[repo] = False
+    return _visibility[repo]
+
+
 def merged_pull_requests():
-    """Merged pull requests authored by USERNAME, newest first."""
+    """Merged pull requests authored by USERNAME in public repositories, newest first."""
     items = []
     for page in (1, 2):
         data = rest(
@@ -71,6 +84,8 @@ def merged_pull_requests():
         repo = item.get("repository_url", "").split("/repos/")[-1]
         merged_at = item.get("pull_request", {}).get("merged_at")
         if not repo or not merged_at or not item.get("number"):
+            continue
+        if not is_public(repo):
             continue
         rows.append(
             {
