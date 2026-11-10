@@ -4,9 +4,7 @@
   <img src="assets/banner-dark-v2.svg" alt="Indra Prasetya, Senior Software Engineer, backend and platform engineering">
 </picture>
 
-<p align="right"><img src="https://komarev.com/ghpvc/?username=indraoverflow&style=flat-square&color=gray" alt="profile views"></p>
-
-# Indra Prasetya
+# Indra Prasetya <img align="right" src="https://komarev.com/ghpvc/?username=indraoverflow&style=flat-square&color=gray" alt="profile views">
 
 ### Senior Software Engineer | Backend and Platform Engineering
 
