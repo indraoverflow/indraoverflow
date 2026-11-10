@@ -5,6 +5,7 @@ Two blocks are maintained here and nowhere else in the file:
 
   CONTRIBUTIONS  merged pull requests into repositories the owner does not own
   STATS          contribution counts and merged totals from the GitHub API
+  PROJECTS       release, last commit and licence for each flagship repository
 
 Everything else in the README is written by hand. Sections are located by
 their HTML comment markers, so a run can never touch prose outside them.
@@ -25,7 +26,18 @@ UPDATED_AT = datetime.now(timezone(timedelta(hours=7))).strftime("%Y-%m-%d")
 BLOCKS = {
     "contributions": ("<!-- CONTRIBUTIONS:START -->", "<!-- CONTRIBUTIONS:END -->"),
     "stats": ("<!-- STATS:START -->", "<!-- STATS:END -->"),
+    "projects": ("<!-- PROJECTS:START -->", "<!-- PROJECTS:END -->"),
 }
+
+# The flagship repositories, in the order the README presents them.
+PROJECTS = [
+    ("agentdiet", "qansaid/agentdiet"),
+    ("gha-bill", "indraoverflow/gha-bill"),
+    ("kafka-security", "indraoverflow/kafka-security-ssl-sasl"),
+    ("kafka-monitoring", "indraoverflow/kafka-monitoring"),
+    ("consistency-nginx", "indraoverflow/consistency-nginx"),
+    ("wis-backend", "indraoverflow/backend-wis-mulai-hidup"),
+]
 
 
 def token():
@@ -151,6 +163,38 @@ def render_stats(rows):
     return lines
 
 
+def age(iso_date):
+    days = (datetime.now(timezone.utc) - datetime.fromisoformat(iso_date.replace("Z", "+00:00"))).days
+    if days <= 0:
+        return "today"
+    if days == 1:
+        return "yesterday"
+    if days < 60:
+        return f"{days} days ago"
+    if days < 730:
+        return f"{days // 30} months ago"
+    return f"{days // 365} years ago"
+
+
+def render_projects():
+    lines = ["| Project | Latest release | Last commit | License |", "| --- | --- | --- | --- |"]
+    for label, repo in PROJECTS:
+        meta = rest(f"/repos/{repo}")
+        try:
+            release = rest(f"/repos/{repo}/releases/latest")
+            version = release.get("tag_name") or "none"
+        except (urllib.error.HTTPError, urllib.error.URLError, ValueError):
+            version = "none"
+        commits = rest(f"/repos/{repo}/commits?per_page=1")
+        last = commits[0]["commit"]["committer"]["date"] if commits else None
+        license_id = (meta.get("license") or {}).get("spdx_id") or "not set"
+        if license_id == "NOASSERTION":
+            license_id = "not set"
+        when = age(last) if last else "unknown"
+        lines.append(f"| [{label}](https://github.com/{repo}) | {version} | {when} | {license_id} |")
+    return lines
+
+
 def replace_block(content, start, end, body):
     pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), re.DOTALL)
     if not pattern.search(content):
@@ -166,9 +210,11 @@ def main():
 
     contributions = "\n".join(render_contributions(rows))
     stats = "\n".join(render_stats(rows))
+    projects = "\n".join(render_projects())
 
     content = replace_block(content, *BLOCKS["contributions"], contributions)
     content = replace_block(content, *BLOCKS["stats"], stats)
+    content = replace_block(content, *BLOCKS["projects"], projects)
 
     with open(README, "w", encoding="utf-8") as handle:
         handle.write(content)

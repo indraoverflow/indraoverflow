@@ -122,6 +122,21 @@ and theme modules, wedding media, transactional email, and Prisma migrations.
 
 Stack: Node.js, Express, TypeScript, Prisma, PostgreSQL, JWT, Nodemailer.
 
+### Repository status
+
+Facts about each flagship repository, refreshed from the GitHub API.
+
+<!-- PROJECTS:START -->
+| Project | Latest release | Last commit | License |
+| --- | --- | --- | --- |
+| [agentdiet](https://github.com/qansaid/agentdiet) | v0.1.8 | yesterday | MIT |
+| [gha-bill](https://github.com/indraoverflow/gha-bill) | none | 4 days ago | MIT |
+| [kafka-security](https://github.com/indraoverflow/kafka-security-ssl-sasl) | none | 14 months ago | not set |
+| [kafka-monitoring](https://github.com/indraoverflow/kafka-monitoring) | none | 14 months ago | not set |
+| [consistency-nginx](https://github.com/indraoverflow/consistency-nginx) | none | 4 days ago | not set |
+| [wis-backend](https://github.com/indraoverflow/backend-wis-mulai-hidup) | none | 2 years ago | not set |
+<!-- PROJECTS:END -->
+
 ---
 
 ## Open source contributions
@@ -176,10 +191,10 @@ belongs to the maintainer, so it does not appear in the generated list.
 <!-- STATS:START -->
 | Metric | Value |
 | --- | --- |
-| Contributions, last 12 months | 290 |
-| Commits, last 12 months | 66 |
+| Contributions, last 12 months | 294 |
+| Commits, last 12 months | 67 |
 | Pull requests opened, last 12 months | 66 |
-| Private contributions, last 12 months | 139 |
+| Private contributions, last 12 months | 142 |
 | Merged pull requests authored, all time | 50 in 8 repositories |
 | Merged upstream, all time | 4 in 1 repository |
 

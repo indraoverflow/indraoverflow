@@ -20,7 +20,7 @@ import urllib.request
 
 README = pathlib.Path("README.md")
 ROOT = README.parent
-BLOCKS = ("CONTRIBUTIONS", "STATS")
+BLOCKS = ("CONTRIBUTIONS", "STATS", "PROJECTS")
 TIMEOUT = 20
 UA = "Mozilla/5.0 (compatible; profile-health-check)"
 
