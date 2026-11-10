@@ -4,6 +4,10 @@
   <img src="assets/banner-dark.svg" alt="Indra Prasetya, Senior Software Engineer, backend and platform engineering">
 </picture>
 
+# Indra Prasetya
+
+### Senior Software Engineer | Backend and Platform Engineering
+
 <p align="right"><img src="https://komarev.com/ghpvc/?username=indraoverflow&style=flat-square&color=gray" alt="profile views"></p>
 
 I am a software engineer working on backend and platform systems. I have been
