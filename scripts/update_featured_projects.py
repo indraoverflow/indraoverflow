@@ -8,7 +8,7 @@ from datetime import date, datetime, timezone, timedelta
 
 USERNAME = "indraoverflow"
 README = "README.md"
-START_YEAR = 2014  # reconciled to 12+ years (AGENTS.md / IND-1 onboarding plan)
+START_YEAR = 2012  # engineering career start year; the profile states the total
 RECENT_START = "<!-- RECENT_CONTRIBUTIONS:START -->"
 RECENT_END = "<!-- RECENT_CONTRIBUTIONS:END -->"
 FEATURED_START = "<!-- FEATURED_PROJECTS:START -->"

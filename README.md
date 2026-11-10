@@ -2,7 +2,7 @@
 
 ### Senior Software Engineer | Backend Engineering | DevOps
 
-Software Engineer with 12+ years of experience building
+Software Engineer with 14+ years of experience building
 backend systems, enterprise applications, and scalable
 technology solutions.
 
@@ -100,10 +100,12 @@ _Excerpt: the scoped, on-demand and config sections plus four remaining findings
 <!-- RECENT_CONTRIBUTIONS:START -->
 ## 🔄 Recent Contributions
 
-_Last updated: 10 November 2026, 09:13 GMT+7_
+_Last updated: 10 November 2026, 09:33 GMT+7_
 
-- [fix(security): fail closed when production starts with default admin or no encryption key](https://github.com/artivisi/balaka/pull/55) : `artivisi/balaka` (open)
+- [fix(history): bound the query cache and drop expired results](https://github.com/tukangk3tik/quakescope-d3/pull/6) : `tukangk3tik/quakescope-d3` (open)
+- [fix(coa): flag cash/bank accounts explicitly instead of an account-code prefix](https://github.com/artivisi/balaka/pull/56) : `artivisi/balaka` (open)
 - [Sync: code scanning fixes and feature updates](https://github.com/artivisi/balaka/pull/42) : `artivisi/balaka` (open)
+- [fix(security): fail closed when production starts with default admin or no encryption key](https://github.com/artivisi/balaka/pull/55) : `artivisi/balaka` (open)
 - [fix(norm): fill in defaults for in-tree volume types (rbd, scaleIO, azureDisk)](https://github.com/GillMacedo/wontpatch/pull/5) : `GillMacedo/wontpatch` (open)
 - [fix(networkrules): evaluate domain, third-party and method modifiers on responses](https://github.com/irbis-sh/zen-desktop/pull/881) : `irbis-sh/zen-desktop` (open)
 - [fix(jwt): keep unsafe integers exact when encoding JWTs](https://github.com/codercops/toolbelt/pull/478) : `codercops/toolbelt` (open)
