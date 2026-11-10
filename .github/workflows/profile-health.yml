@@ -1,0 +1,56 @@
+name: Profile health check
+
+on:
+  schedule:
+    - cron: "0 1 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: profile-health
+  cancel-in-progress: false
+
+env:
+  ISSUE_TITLE: Profile health check is failing
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run the checks
+        id: run
+        run: |
+          set -o pipefail
+          python scripts/check_profile_health.py 2>&1 | tee health.txt
+
+      - name: Open or close the tracking issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUTCOME: ${{ steps.run.outcome }}
+        run: |
+          set -euo pipefail
+          open_issue=$(gh issue list --state open --search "\"$ISSUE_TITLE\" in:title" --json number --jq '.[0].number // empty')
+          if [ "$OUTCOME" = "success" ]; then
+            if [ -n "$open_issue" ]; then
+              gh issue comment "$open_issue" --body "Checks pass again on $(date -u +%Y-%m-%d). Closing."
+              gh issue close "$open_issue" --reason completed
+            fi
+            exit 0
+          fi
+          body=$(printf 'The weekly profile check failed on %s.\n\n```\n%s\n```\n\nRun: %s/%s/actions/runs/%s\n' \
+            "$(date -u +%Y-%m-%d)" "$(cat health.txt)" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID")
+          if [ -n "$open_issue" ]; then
+            gh issue comment "$open_issue" --body "$body"
+          else
+            gh issue create --title "$ISSUE_TITLE" --body "$body"
+          fi
+          exit 1
