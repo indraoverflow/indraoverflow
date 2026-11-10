@@ -173,6 +173,19 @@ belongs to the maintainer, so it does not appear in the generated list.
 
 ## Activity
 
+<!-- STATS:START -->
+| Metric | Value |
+| --- | --- |
+| Contributions, last 12 months | 288 |
+| Commits, last 12 months | 64 |
+| Pull requests opened, last 12 months | 66 |
+| Private contributions, last 12 months | 139 |
+| Merged pull requests authored, all time | 52 in 9 repositories |
+| Merged upstream, all time | 4 in 1 repository |
+
+_Refreshed 2026-11-10 from the GitHub API._
+<!-- STATS:END -->
+
 <a href="https://github.com/indraoverflow">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=indraoverflow&theme=dark&hide_border=true&short_numbers=true">

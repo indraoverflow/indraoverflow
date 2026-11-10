@@ -1,4 +1,4 @@
-name: Refresh contributions
+name: Refresh profile data
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: refresh-contributions
+  group: refresh-profile-data
   cancel-in-progress: false
 
 jobs:
@@ -20,14 +20,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-      - name: Refresh the contributions section
+      - name: Refresh the generated README blocks
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/update_contributions.py
-      - name: Commit when the section changed
+        run: python scripts/update_profile.py
+      - name: Commit when a block changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --staged --quiet || git commit -m "docs(profile): refresh merged contributions"
+          git diff --staged --quiet || git commit -m "docs(profile): refresh contribution data"
           git push
