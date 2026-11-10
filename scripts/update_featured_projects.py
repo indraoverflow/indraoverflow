@@ -43,7 +43,7 @@ recent_data = fetch(
 recent_items = recent_data.get("items", [])
 wib_now = datetime.now(timezone(timedelta(hours=7)))
 updated_label = wib_now.strftime("%d %B %Y, %H:%M GMT+7")
-recent_lines = ["## 🔄 Recent Contributions", "", f"_Last updated: {updated_label}_", ""]
+recent_lines = ["## Recent Contributions", "", f"_Last updated: {updated_label}_", ""]
 if not recent_items:
     recent_lines.append("_No recent pull requests found._")
 else:
@@ -103,7 +103,7 @@ CREDITED = [
     ),
 ]
 
-featured_lines = ["## 📌 Featured Projects", "", "_Repositories where my work was merged._", ""]
+featured_lines = ["## Featured Projects", "", "_Repositories where my work was merged._", ""]
 
 generated = {}
 order = []
@@ -138,7 +138,7 @@ featured_body = "\n".join(featured_lines)
 
 # Tech stack (recommended curated format)
 tech_lines = [
-    "## 🛠 Tech Stack",
+    "## Tech Stack",
     "",
     "| Category | Technologies |",
     "|---|---|",
