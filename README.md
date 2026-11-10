@@ -73,7 +73,8 @@ _Last updated: 10 November 2026, 09:35 GMT+7_
 
 ## Activity
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=indraoverflow&theme=dark&hide_border=true&short_numbers=true)](https://github.com/indraoverflow)
+[![GitHub Streak](https://streak-stats.demolab.com?user=indraoverflow&theme=dark&hide_border=true&short_numbers=true#gh-dark-mode-only)](https://github.com/indraoverflow)
+[![GitHub Streak](https://streak-stats.demolab.com?user=indraoverflow&theme=default&hide_border=true&short_numbers=true#gh-light-mode-only)](https://github.com/indraoverflow)
 
 <img src="https://komarev.com/ghpvc/?username=indraoverflow&style=flat-square&color=gray" alt="profile views"/>
 
