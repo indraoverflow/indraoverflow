@@ -116,9 +116,9 @@ Stack: NGINX, Docker Compose, Makefile, Shell.
 
 ### [backend-wis-mulai-hidup](https://github.com/indraoverflow/backend-wis-mulai-hidup)
 
-Backend for a wedding invitation platform, and the project where most of my
-Node.js and PostgreSQL production patterns were exercised end to end:
-authentication, media handling, transactional email, and schema migrations.
+Backend for a wedding invitation platform, and the project where my Node.js
+and PostgreSQL patterns were exercised end to end: authentication, invitation
+and theme modules, wedding media, transactional email, and Prisma migrations.
 
 Stack: Node.js, Express, TypeScript, Prisma, PostgreSQL, JWT, Nodemailer.
 
