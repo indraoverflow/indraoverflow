@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
-  <img src="assets/banner-dark.svg" alt="Indra Prasetya, Senior Software Engineer, backend and platform engineering">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg?v=2">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg?v=2">
+  <img src="assets/banner-dark.svg?v=2" alt="Indra Prasetya, Senior Software Engineer, backend and platform engineering">
 </picture>
 
 # Indra Prasetya
