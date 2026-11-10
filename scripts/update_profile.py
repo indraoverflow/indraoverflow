@@ -33,10 +33,7 @@ BLOCKS = {
 PROJECTS = [
     ("agentdiet", "qansaid/agentdiet"),
     ("gha-bill", "indraoverflow/gha-bill"),
-    ("kafka-security", "indraoverflow/kafka-security-ssl-sasl"),
-    ("kafka-monitoring", "indraoverflow/kafka-monitoring"),
     ("consistency-nginx", "indraoverflow/consistency-nginx"),
-    ("wis-backend", "indraoverflow/backend-wis-mulai-hidup"),
 ]
 
 

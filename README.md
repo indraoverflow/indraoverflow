@@ -93,18 +93,6 @@ CI workflow that runs it.
 
 Stack: Python, GitHub Actions, CodeQL.
 
-### [kafka-security-ssl-sasl](https://github.com/indraoverflow/kafka-security-ssl-sasl) and [kafka-monitoring](https://github.com/indraoverflow/kafka-monitoring)
-
-Operating a Kafka cluster is two problems: proving a broker is healthy, and
-seeing what it is doing. These two repositories cover both.
-
-The first is a health checker for brokers behind TLS and SASL-SCRAM, built on
-`kafka-broker-api-versions`, with retries and webhook alerts when a broker
-fails. The second is a Compose stack that collects metrics and logs with
-Prometheus, Loki and Promtail and visualises them in Grafana.
-
-Stack: Bash, Kafka, Prometheus, Loki, Grafana, Docker Compose.
-
 ### [consistency-nginx](https://github.com/indraoverflow/consistency-nginx)
 
 A cache cluster only works when the same key lands on the same node, or the hit
@@ -113,14 +101,6 @@ using consistent hashing in front of two cache nodes and a backend, with a
 script that proves routing is stable across requests.
 
 Stack: NGINX, Docker Compose, Makefile, Shell.
-
-### [backend-wis-mulai-hidup](https://github.com/indraoverflow/backend-wis-mulai-hidup)
-
-Backend for a wedding invitation platform, and the project where my Node.js
-and PostgreSQL patterns were exercised end to end: authentication, invitation
-and theme modules, wedding media, transactional email, and Prisma migrations.
-
-Stack: Node.js, Express, TypeScript, Prisma, PostgreSQL, JWT, Nodemailer.
 
 ### Repository status
 
@@ -131,11 +111,26 @@ Facts about each flagship repository, refreshed from the GitHub API.
 | --- | --- | --- | --- |
 | [agentdiet](https://github.com/qansaid/agentdiet) | v0.1.8 | yesterday | MIT |
 | [gha-bill](https://github.com/indraoverflow/gha-bill) | none | 4 days ago | MIT |
-| [kafka-security](https://github.com/indraoverflow/kafka-security-ssl-sasl) | none | 14 months ago | not set |
-| [kafka-monitoring](https://github.com/indraoverflow/kafka-monitoring) | none | 14 months ago | not set |
-| [consistency-nginx](https://github.com/indraoverflow/consistency-nginx) | none | 4 days ago | not set |
-| [wis-backend](https://github.com/indraoverflow/backend-wis-mulai-hidup) | none | 2 years ago | not set |
+| [consistency-nginx](https://github.com/indraoverflow/consistency-nginx) | none | today | MIT |
 <!-- PROJECTS:END -->
+
+---
+
+## Other repositories
+
+[kafka-security-ssl-sasl](https://github.com/indraoverflow/kafka-security-ssl-sasl)
+and [kafka-monitoring](https://github.com/indraoverflow/kafka-monitoring):
+operating a Kafka cluster is two problems, proving a broker is healthy and
+seeing what it is doing. The first is a health checker for brokers behind TLS
+and SASL-SCRAM, with retries and webhook alerts when a broker fails. The second
+is a Compose stack that collects metrics and logs with Prometheus, Loki and
+Promtail and visualises them in Grafana. Both are complete and stable rather
+than under active development.
+
+[backend-wis-mulai-hidup](https://github.com/indraoverflow/backend-wis-mulai-hidup):
+backend for a wedding invitation platform, with invitation and theme modules,
+wedding media, transactional email and Prisma migrations on PostgreSQL.
+Node.js, Express, TypeScript.
 
 ---
 
@@ -191,10 +186,10 @@ belongs to the maintainer, so it does not appear in the generated list.
 <!-- STATS:START -->
 | Metric | Value |
 | --- | --- |
-| Contributions, last 12 months | 295 |
-| Commits, last 12 months | 68 |
+| Contributions, last 12 months | 301 |
+| Commits, last 12 months | 73 |
 | Pull requests opened, last 12 months | 66 |
-| Private contributions, last 12 months | 142 |
+| Private contributions, last 12 months | 143 |
 | Merged pull requests authored, all time | 50 in 8 repositories |
 | Merged upstream, all time | 4 in 1 repository |
 
