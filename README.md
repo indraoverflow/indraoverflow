@@ -10,7 +10,6 @@
 
 ### Senior Software Engineer | Backend and Platform Engineering
 
-
 I am a software engineer working on backend and platform systems. I have been
 building software professionally since 2012, most of it in enterprise
 environments: data migrations at telecommunications scale, database-heavy
