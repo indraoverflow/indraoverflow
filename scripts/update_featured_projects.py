@@ -72,9 +72,14 @@ recent_body = "\n".join(recent_lines)
 # Featured projects (merged PRs, deduped by repo)
 merged_data = fetch(
     "https://api.github.com/search/issues"
-    f"?q=author:{USERNAME}+type:pr+is:merged&sort=updated&order=desc&per_page=30"
+    f"?q=author:{USERNAME}+type:pr+is:merged&sort=updated&order=desc&per_page=100"
 )
 merged_items = merged_data.get("items", [])
+
+# The window is per pull request, not per repository: eighteen merged PRs in a
+# single repository can fill it and hide every older repository behind them.
+# Dedupe happens below, so ask for enough rows that dedupe cannot starve the
+# section. 100 is the search API maximum for this endpoint.
 
 # Two things the author query cannot express, both kept explicit.
 #
