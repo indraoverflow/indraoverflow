@@ -107,9 +107,9 @@ Facts about each flagship repository, refreshed from the GitHub API.
 <!-- PROJECTS:START -->
 | Project | Release | Commit | License |
 | --- | --- | --- | --- |
-| [agentdiet](https://github.com/qansaid/agentdiet) | v0.1.8 | yesterday | MIT |
-| [gha-bill](https://github.com/indraoverflow/gha-bill) | none | 4 days ago | MIT |
-| [consistency-nginx](https://github.com/indraoverflow/consistency-nginx) | none | today | MIT |
+| [agentdiet](https://github.com/qansaid/agentdiet) | v0.1.8 | today | MIT |
+| [gha-bill](https://github.com/indraoverflow/gha-bill) | none | 5 days ago | MIT |
+| [consistency-nginx](https://github.com/indraoverflow/consistency-nginx) | none | yesterday | MIT |
 <!-- PROJECTS:END -->
 
 ---
@@ -141,6 +141,10 @@ its installer, its HackerOne MCP integration and its documentation, each one mad
 after reproducing the failure.
 
 <!-- CONTRIBUTIONS:START -->
+- **[irbis-sh/zen-desktop](https://github.com/irbis-sh/zen-desktop)**: 1 merged pull request, latest 2026-11-10
+  - fix(networkrules): evaluate domain, third-party and method modifiers on responses ([#881](https://github.com/irbis-sh/zen-desktop/pull/881), merged 2026-11-10)
+- **[wmentor/go-magnetar](https://github.com/wmentor/go-magnetar)**: 1 merged pull request, latest 2026-11-10
+  - fix(chatcmd): drop /r alias for /revert to avoid clash with /read ([#323](https://github.com/wmentor/go-magnetar/pull/323), merged 2026-11-10)
 - **[awarexone/Agentic-Bug-Hunter](https://github.com/awarexone/Agentic-Bug-Hunter)**: 4 merged pull requests, latest 2026-09-28
   - fix(hackerone-mcp): update Team GraphQL query for removed H1 fields ([#164](https://github.com/awarexone/Agentic-Bug-Hunter/pull/164), merged 2026-09-28)
   - fix(docs): correct install_tools.sh path, add doc-path regression test ([#163](https://github.com/awarexone/Agentic-Bug-Hunter/pull/163), merged 2026-09-28)
@@ -185,14 +189,14 @@ belongs to the maintainer, so it does not appear in the generated list.
 <!-- STATS:START -->
 | Metric | Value |
 | --- | --- |
-| Contributions, last 12 months | 308 |
-| Commits, last 12 months | 79 |
-| Pull requests opened, last 12 months | 66 |
+| Contributions, last 12 months | 339 |
+| Commits, last 12 months | 86 |
+| Pull requests opened, last 12 months | 76 |
 | Private contributions, last 12 months | 144 |
-| Merged pull requests authored, all time | 50 in 8 repositories |
-| Merged upstream, all time | 4 in 1 repository |
+| Merged pull requests authored, all time | 57 in 10 repositories |
+| Merged upstream, all time | 6 in 3 repositories |
 
-_Refreshed 2026-11-10 from the GitHub API._
+_Refreshed 2026-11-11 from the GitHub API._
 <!-- STATS:END -->
 
 <a href="https://github.com/indraoverflow">
