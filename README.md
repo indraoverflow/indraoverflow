@@ -107,9 +107,9 @@ Facts about each flagship repository, refreshed from the GitHub API.
 <!-- PROJECTS:START -->
 | Project | Release | Commit | License |
 | --- | --- | --- | --- |
-| [agentdiet](https://github.com/qansaid/agentdiet) | v0.1.8 | today | MIT |
-| [gha-bill](https://github.com/indraoverflow/gha-bill) | none | 5 days ago | MIT |
-| [consistency-nginx](https://github.com/indraoverflow/consistency-nginx) | none | yesterday | MIT |
+| [agentdiet](https://github.com/qansaid/agentdiet) | v0.1.8 | yesterday | MIT |
+| [gha-bill](https://github.com/indraoverflow/gha-bill) | none | 6 days ago | MIT |
+| [consistency-nginx](https://github.com/indraoverflow/consistency-nginx) | none | 2 days ago | MIT |
 <!-- PROJECTS:END -->
 
 ---
@@ -141,14 +141,20 @@ its installer, its HackerOne MCP integration and its documentation, each one mad
 after reproducing the failure.
 
 <!-- CONTRIBUTIONS:START -->
+- **[artivisi/balaka](https://github.com/artivisi/balaka)**: 1 merged pull request, latest 2026-11-12
+  - feat(config): document storage path and forwarded headers from the environment ([#58](https://github.com/artivisi/balaka/pull/58), merged 2026-11-12)
+- **[cfgaudit/cfgaudit](https://github.com/cfgaudit/cfgaudit)**: 1 merged pull request, latest 2026-11-11
+  - scanroot: treat a symlink that loops as absent ([#1694](https://github.com/cfgaudit/cfgaudit/pull/1694), merged 2026-11-11)
+- **[codercops/toolbelt](https://github.com/codercops/toolbelt)**: 1 merged pull request, latest 2026-11-11
+  - fix(jwt): keep unsafe integers exact when encoding JWTs ([#478](https://github.com/codercops/toolbelt/pull/478), merged 2026-11-11)
+- **[mohanedmoh/treebind](https://github.com/mohanedmoh/treebind)**: 1 merged pull request, latest 2026-11-11
+  - feat(agent): add transient file patterns and settle check ([#128](https://github.com/mohanedmoh/treebind/pull/128), merged 2026-11-11)
 - **[irbis-sh/zen-desktop](https://github.com/irbis-sh/zen-desktop)**: 1 merged pull request, latest 2026-11-10
   - fix(networkrules): evaluate domain, third-party and method modifiers on responses ([#881](https://github.com/irbis-sh/zen-desktop/pull/881), merged 2026-11-10)
 - **[wmentor/go-magnetar](https://github.com/wmentor/go-magnetar)**: 1 merged pull request, latest 2026-11-10
   - fix(chatcmd): drop /r alias for /revert to avoid clash with /read ([#323](https://github.com/wmentor/go-magnetar/pull/323), merged 2026-11-10)
-- **[awarexone/Agentic-Bug-Hunter](https://github.com/awarexone/Agentic-Bug-Hunter)**: 4 merged pull requests, latest 2026-09-28
+- **[awarexone/Agentic-Bug-Hunter](https://github.com/awarexone/Agentic-Bug-Hunter)**: 2 merged pull requests, latest 2026-09-28
   - fix(hackerone-mcp): update Team GraphQL query for removed H1 fields ([#164](https://github.com/awarexone/Agentic-Bug-Hunter/pull/164), merged 2026-09-28)
-  - fix(docs): correct install_tools.sh path, add doc-path regression test ([#163](https://github.com/awarexone/Agentic-Bug-Hunter/pull/163), merged 2026-09-28)
-  - fix(tools): point _dep_hint fallback at a path that exists ([#162](https://github.com/awarexone/Agentic-Bug-Hunter/pull/162), merged 2026-09-28)
   - fix(install): resolve split repo layout, anchor to script dir, fail loud ([#161](https://github.com/awarexone/Agentic-Bug-Hunter/pull/161), merged 2026-09-28)
 <!-- CONTRIBUTIONS:END -->
 
@@ -189,14 +195,14 @@ belongs to the maintainer, so it does not appear in the generated list.
 <!-- STATS:START -->
 | Metric | Value |
 | --- | --- |
-| Contributions, last 12 months | 339 |
-| Commits, last 12 months | 86 |
-| Pull requests opened, last 12 months | 76 |
+| Contributions, last 12 months | 345 |
+| Commits, last 12 months | 90 |
+| Pull requests opened, last 12 months | 78 |
 | Private contributions, last 12 months | 144 |
-| Merged pull requests authored, all time | 57 in 10 repositories |
-| Merged upstream, all time | 6 in 3 repositories |
+| Merged pull requests authored, all time | 61 in 14 repositories |
+| Merged upstream, all time | 10 in 7 repositories |
 
-_Refreshed 2026-11-11 from the GitHub API._
+_Refreshed 2026-11-12 from the GitHub API._
 <!-- STATS:END -->
 
 <a href="https://github.com/indraoverflow">
