@@ -107,9 +107,9 @@ Facts about each flagship repository, refreshed from the GitHub API.
 <!-- PROJECTS:START -->
 | Project | Release | Commit | License |
 | --- | --- | --- | --- |
-| [agentdiet](https://github.com/qansaid/agentdiet) | v0.1.8 | today | MIT |
-| [gha-bill](https://github.com/indraoverflow/gha-bill) | none | 7 days ago | MIT |
-| [consistency-nginx](https://github.com/indraoverflow/consistency-nginx) | none | 3 days ago | MIT |
+| [agentdiet](https://github.com/qansaid/agentdiet) | v0.1.8 | yesterday | MIT |
+| [gha-bill](https://github.com/indraoverflow/gha-bill) | none | 8 days ago | MIT |
+| [consistency-nginx](https://github.com/indraoverflow/consistency-nginx) | none | 4 days ago | MIT |
 <!-- PROJECTS:END -->
 
 ---
@@ -141,21 +141,22 @@ its installer, its HackerOne MCP integration and its documentation, each one mad
 after reproducing the failure.
 
 <!-- CONTRIBUTIONS:START -->
-- **[Ludocius/creep](https://github.com/Ludocius/creep)**: 1 merged pull request, latest 2026-11-13
-  - fix(budget): count final line when file has no trailing newline ([#65](https://github.com/Ludocius/creep/pull/65), merged 2026-11-13)
+- **[pulseaiclub/phi](https://github.com/pulseaiclub/phi)**: 1 merged pull request, latest 2026-11-14
+  - docs: sync README.zh-CN.md with English README ([#528](https://github.com/pulseaiclub/phi/pull/528), merged 2026-11-14)
+- **[glsec/glsec](https://github.com/glsec/glsec)**: 1 merged pull request, latest 2026-11-13
+  - fix(GL062): treat grep filters that cannot reach CI secrets as narrow (#1375) ([#1410](https://github.com/glsec/glsec/pull/1410), merged 2026-11-13)
+- **[sneakercreepers/creep](https://github.com/sneakercreepers/creep)**: 1 merged pull request, latest 2026-11-13
+  - fix(budget): count final line when file has no trailing newline ([#65](https://github.com/sneakercreepers/creep/pull/65), merged 2026-11-13)
 - **[GregoireF/ship-it](https://github.com/GregoireF/ship-it)**: 1 merged pull request, latest 2026-11-12
   - 🐛 fix(cli): accept --yes on ship stack sync ([#108](https://github.com/GregoireF/ship-it/pull/108), merged 2026-11-12)
 - **[Edwin-metcalf/MetCode](https://github.com/Edwin-metcalf/MetCode)**: 1 merged pull request, latest 2026-11-12
   - fix(metbench): return on validation errors instead of continuing (#35) ([#48](https://github.com/Edwin-metcalf/MetCode/pull/48), merged 2026-11-12)
 - **[stokaro/ptah-operator](https://github.com/stokaro/ptah-operator)**: 1 merged pull request, latest 2026-11-12
   - docs(security): state the 128 aggregate bound the code enforces (#944) ([#1016](https://github.com/stokaro/ptah-operator/pull/1016), merged 2026-11-12)
-- **[cfgaudit/cfgaudit](https://github.com/cfgaudit/cfgaudit)**: 2 merged pull requests, latest 2026-11-12
+- **[cfgaudit/cfgaudit](https://github.com/cfgaudit/cfgaudit)**: 1 merged pull request, latest 2026-11-12
   - fix(cfg008): only report /dev/tcp reverse shells wired to a shell ([#1724](https://github.com/cfgaudit/cfgaudit/pull/1724), merged 2026-11-12)
-  - scanroot: treat a symlink that loops as absent ([#1694](https://github.com/cfgaudit/cfgaudit/pull/1694), merged 2026-11-11)
 - **[artivisi/balaka](https://github.com/artivisi/balaka)**: 1 merged pull request, latest 2026-11-12
   - feat(config): document storage path and forwarded headers from the environment ([#58](https://github.com/artivisi/balaka/pull/58), merged 2026-11-12)
-- **[codercops/toolbelt](https://github.com/codercops/toolbelt)**: 1 merged pull request, latest 2026-11-11
-  - fix(jwt): keep unsafe integers exact when encoding JWTs ([#478](https://github.com/codercops/toolbelt/pull/478), merged 2026-11-11)
 <!-- CONTRIBUTIONS:END -->
 
 Also credited: [garrytan/gstack#4085](https://github.com/garrytan/gstack/pull/4085),
@@ -195,14 +196,14 @@ belongs to the maintainer, so it does not appear in the generated list.
 <!-- STATS:START -->
 | Metric | Value |
 | --- | --- |
-| Contributions, last 12 months | 428 |
-| Commits, last 12 months | 139 |
-| Pull requests opened, last 12 months | 92 |
+| Contributions, last 12 months | 482 |
+| Commits, last 12 months | 169 |
+| Pull requests opened, last 12 months | 104 |
 | Private contributions, last 12 months | 144 |
-| Merged pull requests authored, all time | 69 in 19 repositories |
-| Merged upstream, all time | 15 in 11 repositories |
+| Merged pull requests authored, all time | 71 in 21 repositories |
+| Merged upstream, all time | 17 in 13 repositories |
 
-_Refreshed 2026-11-13 from the GitHub API._
+_Refreshed 2026-11-14 from the GitHub API._
 <!-- STATS:END -->
 
 <a href="https://github.com/indraoverflow">
